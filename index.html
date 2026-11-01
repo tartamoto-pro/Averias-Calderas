@@ -472,7 +472,11 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     baxi_platinum_compact: [
       ["E09","gas","Fallo de conexión de la válvula de gas",""],
       ["E10","sensor","Sonda exterior averiada",""],
+      ["E12", "agua", "Falta de conmutación del presostato diferencial hidráulico", "Revisar el presostato y su cableado."],
+      ["E13", "agua", "Contactos del presostato diferencial hidráulico pegados", "Mismas comprobaciones que E12."],
       ["E15","gas","Fallo en la válvula de gas",""],
+      ["E18", "agua", "Llenado automático del circuito en curso", "Esperar a que termine el ciclo de llenado."],
+      ["E19", "agua", "Anomalía durante el llenado de la instalación", "Revisar el grifo de llenado. Rearmar con la tecla O/R 2 s."],
       ["E20","sensor","Sonda NTC de ida averiada",""],
       ["E28","sensor","Sonda NTC de humos averiada",""],
       ["E40","sensor","Sonda NTC de retorno averiada",""],
@@ -487,11 +491,14 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["E118","agua","Presión demasiado baja en el circuito hidráulico",""],
       ["E125","temp","Parada de seguridad por falta de circulación detectada por la sonda de temperatura",""],
       ["E128","llama","Pérdida de llama",""],
+      ["E129", "llama", "Pérdida de llama durante el encendido", "Revisar el electrodo de detección, el cable y posibles recirculaciones de humos."],
       ["E130","temp","Sonda NTC de humos activada por sobretemperatura",""],
       ["E133","llama","Fallo de encendido tras 5 intentos",""],
       ["E134","gas","Válvula de gas bloqueada",""],
       ["E135","electronica","Error interno de la placa",""],
+      ["E154", "sensor", "Prueba de control de las sondas de ida y retorno", "Mismas comprobaciones que E109."],
       ["E160","humos","Anomalía del ventilador",""],
+      ["E178", "temp", "Seguridad por sobretemperatura en instalación de baja temperatura", "Revisar la bomba, la circulación y el cableado de la bomba."],
       ["E317","electronica","Frecuencia de red incorrecta",""],
       ["E321","sensor","Sonda NTC de agua caliente sanitaria averiada",""],
       ["E385","electronica","Tensión de alimentación demasiado baja",""],
@@ -4754,12 +4761,12 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["Rearme","info","Rearme tras un bloqueo (Novanox)","La caldera admite 5 intentos seguidos; después se bloquea. Para reintentarlo: mantener una tecla unos 2 s, luego otra unos 2 s hasta ver oFF, y volver a poner el modo de funcionamiento."]
     ],
     roca_neodens_func: [
-      ["6 s","info","Cómo se activan las funciones (Neodens Plus y Platinum Compact)","Pulsar a la vez las dos teclas indicadas en el panel al menos 6 s: sale On y después el número de la función (303, 304, 312…). Para salir, pulsar otra vez esas teclas 6 s. Si algo sale mal, apagar la caldera unos segundos y repetir."],
-      ["303","info","Deshollinador: potencia máxima en calefacción para medir los humos","Sale 303 alternando con el % de potencia. Se regula el % con las teclas (de mínima a máxima). Pulsando la tecla indicada se ve 15 s la temperatura de ida."],
-      ["304","info","Ajuste del CO₂ a potencia máxima, de encendido y mínima","Tras encender sube al 100 %. Pulsar la tecla indicada: sale 00 parpadeando. Subir o bajar el CO₂ de −3 a +3 con las teclas y guardar con la tecla de guardar. Para potencia de encendido y mínima: pulsar la tecla de potencia, esperar a que el CO₂ se estabilice y repetir (en mínima se ve 00). Referencia en gas natural a máxima: CO₂ 8,7 % (admitido 8,2 a 9,3). Propano a máxima: 10,0 % (9,5 a 10,5); en encendido, 10,8 %."],
-      ["312","info","Purga de la instalación: ciclo de 10 min de la bomba (encendida/apagada)","Para después de un llenado o de vaciar el circuito. Termina sola; para salir antes, pulsar las teclas de activación 6 s."],
-      ["CAL","info","Calibrado automático de la placa","Hacerlo tras cambiar intercambiador, ventilador, válvula de gas, diafragma, quemador o electrodo. Sin demanda de calor: pulsar a la vez las teclas indicadas unos 6 s y, cuando salga On, pulsar la tecla indicada en los 3 s siguientes. Si aparece 303, no se activó: desconectar la caldera unos segundos y repetir. La caldera hace 3 fases de 1 min (potencia máxima, de encendido y mínima). Cuando los símbolos parpadean a la vez, ha terminado; se sale con la tecla indicada (sale ESC)."],
-      ["P01","info","Parámetros: entrar en la lista P01 a P67","Pulsar a la vez las teclas indicadas 6 s hasta ver P01. Recorrer con las teclas, pulsar la tecla de selección (el valor parpadea), cambiarlo y confirmar con la tecla de guardar. Para salir sin guardar, la tecla de salida."],
+      ["6 s", "info", "Cómo se activan las funciones (Neodens Plus y Platinum Compact)", "Siempre se pulsan dos teclas a la vez 6 s: sale On y después el número de la función (303, 304, 312…). Teclas: purga = i/P + – de calefacción; deshollinador = – de calefacción + O/R; CO₂ = + de calefacción + i/P; calibrado = O/R + – de calefacción. Para salir, las mismas teclas otra vez 6 s. Si algo sale mal, apagar la caldera unos segundos y repetir."],
+      ["303", "info", "Deshollinador: potencia máxima en calefacción para medir los humos", "Entrar: pulsar a la vez la tecla – de calefacción y la tecla O/R, 6 s. Sale On y después 303 alternando con el % de potencia. Subir o bajar el % con – y + de calefacción (de 1 en 1). Pulsando O/R se ve 15 s la temperatura de ida. Salir: otra vez – de calefacción + O/R, 6 s."],
+      ["304", "info", "Ajuste del CO₂ a potencia máxima, de encendido y mínima", "Entrar: pulsar a la vez la tecla + de calefacción y la tecla i/P, 6 s. Sale On y 304. Tras encender sube al 100 %. Pulsar i/P: sale 00 parpadeando. Bajar o subir el CO₂ de −5 a +5 con – y + de calefacción y guardar con i/P. Para potencia de encendido: pulsar la tecla – de calefacción, esperar a que el CO₂ se estabilice y repetir; pulsar – de calefacción otra vez para la mínima (en mínima se ve 00). Salir: + de calefacción e i/P, 6 s. Referencia en gas natural a máxima: CO₂ 8,7 % (admitido 8,2 a 9,3). Propano a máxima: 10,0 % (9,5 a 10,5); en encendido, 10,8 %."],
+      ["312", "info", "Purga de la instalación: ciclo de 10 min de la bomba (encendida/apagada)", "Entrar: pulsar a la vez la tecla i/P y la tecla – de calefacción, 6 s. Sale On y 312. Termina sola; para salir antes, las mismas teclas 6 s. Útil después de un llenado o de vaciar el circuito."],
+      ["CAL", "info", "Calibrado automático de la placa", "Hacerlo tras cambiar intercambiador, ventilador, válvula de gas, diafragma, quemador o electrodo. Sin demanda de calor: pulsar a la vez la tecla O/R y la tecla – de calefacción 6 s y, cuando salga On, pulsar la tecla i/P en los 3 s siguientes. Si aparece 303, no se activó: desconectar la caldera unos segundos y repetir. La caldera hace 3 fases de 1 min (potencia máxima, de encendido y mínima). Cuando los símbolos parpadean a la vez, ha terminado; se sale con la tecla O/R (sale ESC). Después, comprobar el CO₂."],
+      ["P01", "info", "Parámetros: entrar en la lista P01 a P67", "Pulsar a la vez las teclas – y + de calefacción 6 s hasta ver P01. Recorrer con – y + de calefacción, pulsar i/P (el valor parpadea), cambiarlo con – y + y confirmar con i/P. Para salir sin guardar, la tecla O/R."],
       ["P02","info","Tipo de gas: 00 natural, 01 propano","Cambiar de gas y recalibrar solo lo hace el servicio técnico autorizado."],
       ["P03","info","Sistema hidráulico: 00 sin precalentamiento de agua caliente, 03 con él",""],
       ["P06","info","Entrada de la sonda exterior",""],
@@ -4773,7 +4780,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["P23","info","Consigna máxima de agua caliente","De fábrica 60 °C."],
       ["P25","info","Protección por falta de agua",""],
       ["P67","info","Configuración OpenTherm: 00 = Plug & Play",""],
-      ["RESET","info","Rearme tras un bloqueo","Pulsar la tecla indicada 2 s. Tras 5 rearmes seguidos la caldera se bloquea y hay que esperar 15 min."],
+      ["RESET", "info", "Rearme tras un bloqueo", "Pulsar la tecla O/R 2 s. Se pueden hacer 5 rearmes seguidos; después la caldera se bloquea y hay que esperar 15 min."],
       ["Llenado","info","Presión de llenado","Mínima 0,5 bar (por debajo hay que llenar). Máxima 3 bar (aviso a 2,7 bar). Vaso de expansión de 7 l, precarga mínima 0,8 bar."]
     ],
     baxi_iplus_func: [
@@ -7702,6 +7709,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
   var PARENT = {};
   Object.keys(EX).forEach(function(k){EX[k].forEach(function(x){ if(!PARENT[x[1]]) PARENT[x[1]]=k; });});
   var MANUALS = {
+    "baxi-neodens-plus":[["Manual de instalación (solo español)","manuales/baxi/baxi-platinum-compact-eco-instalacion.pdf"],["Manual de usuario (solo español)","manuales/baxi/baxi-platinum-compact-eco-usuario.pdf"]],
     "saunier-isotwin-miconnect":[["Manual de instalación y mantenimiento","manuales/saunier/saunier-isotwin-miconnect-instalacion.pdf"],["Manual de usuario","manuales/saunier/saunier-isotwin-miconnect-usuario.pdf"]],
     "saunier-thermomaster":[["Manual de instalación y mantenimiento","manuales/saunier/saunier-thermomaster-condens-instalacion.pdf"],["Manual de usuario","manuales/saunier/saunier-thermomaster-condens-usuario.pdf"]],
     "saunier-themafast-condens":[["Manual de instalación y mantenimiento","manuales/saunier/saunier-themafast-condens-instalacion.pdf"],["Manual de usuario","manuales/saunier/saunier-themafast-condens-usuario.pdf"]],
