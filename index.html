@@ -4722,12 +4722,12 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.94","info","Borrar la lista de averías","0 no, 1 sí."]
     ],
     vaillant_prog: [
-      ["P.xx","info","Cómo activar los programas de test (ecoTEC plus con pantalla de menú)","Pulsar a la vez las dos teclas indicadas en el panel (una lleva una «i») para abrir el menú. Ir a Nivel especialista, confirmar con OK, introducir el código 17 con las flechas y confirmar. Luego Programas de prueba. Si la caldera está en error no deja iniciarlos: primero resolver el error y rearmar. Para salir, elegir Cancelar."],
+      ["P.xx", "info", "Cómo activar los programas de test (ecoTEC plus con pantalla de menú)", "Teclas de esta caldera: ≡ menú, ✓ confirmar, ← atrás, ? información. Menú → Ajustes → Nivel profesional autorizado y confirmar con ✓. Poner el código 17 y confirmar con ✓. Después Modos de prueba → Programas de comprobación: elegir el programa con la barra de desplazamiento y confirmar con ✓ (con P.001 pide primero la carga: ajustarla y confirmar con ✓). Con ? se ve el Resumen de datos mientras corre. Si la caldera está en error no deja iniciarlos: primero resolver el error y rearmar. Para salir: pulsar ≡ (vuelve a la pantalla básica)."],
       ["P.00","info","Purga: la bomba funciona por ciclos y se purgan el circuito de calefacción y el de agua caliente","Una pulsación purga calefacción; dos pulsaciones, agua caliente; tres, otra vez calefacción. Cada circuito dura 7,5 min. Aflojar la caperuza del purgador automático."],
       ["P.01","info","Carga máxima: tras el encendido la caldera funciona a su potencia máxima","Se usa para ajustar el CO₂."],
       ["P.02","info","Carga mínima: tras el encendido la caldera funciona a su potencia mínima",""],
       ["P.06","info","Modo llenado: válvula de prioridad en posición intermedia, quemador y bomba parados","Para llenar y vaciar la instalación. Solo se activa durante el asistente de instalación."],
-      ["d.xx","info","Menú de diagnóstico (códigos d.xxx)","Nivel especialista (código 17) → Menú diagnóstico. Cambiar de código con las flechas, pulsar Selec., modificar el valor y confirmar con OK."],
+      ["d.xx", "info", "Menú de diagnóstico (códigos d.xxx)", "Nivel profesional autorizado (código 17) → Códigos de diagnóstico. Elegir el código con la barra de desplazamiento y confirmar con ✓; elegir el valor con la barra y confirmar con ✓. Repetir para más códigos. Para salir: ← y luego ≡."],
       ["d.000","info","Carga parcial de calefacción (automática o potencia fija en kW)",""],
       ["d.001","info","Tiempo de marcha en inercia de la bomba","De fábrica 5 min."],
       ["d.002","info","Tiempo máximo de bloqueo del quemador","De fábrica 20 min."],
@@ -4965,13 +4965,13 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["E0","electronica","Fallo interno del circuito impreso","Revisar humedad y contactos; sustituir la placa si sigue."]
     ],
     vaillant_pure_prog: [
-      ["P.xx","info","Cómo activar los programas de test (ecoTEC pure)","Pulsar a la vez las dos teclas indicadas en el panel (una lleva «i»): aparece S.xx. Entrar al nivel especialista con la tecla indicada: sale SoF y luego c.00. Con las flechas poner el código 17 y confirmar. Después, con la tecla indicada, se pasa por d.-- (diagnóstico), P.-- (programas de test), F.-- (errores) y otra vez d.--. En P.-- elegir el programa con las flechas y confirmar para iniciarlo. Con la tecla indicada se alterna entre el programa y la temperatura/presión; para salir, pulsar la tecla de cancelar."],
+      ["P.xx", "info", "Cómo activar los programas de test (ecoTEC pure)", "Teclas de esta caldera: botón de selección izquierdo y derecho (bajo la pantalla, los dos juntos son la «i»), – y +, y el botón de encendido ⏻. Pulsar a la vez el izquierdo y el derecho: sale S.xx. Pulsar el derecho: sale SoF y la versión de software; otra vez el derecho: sale c.00. Con – o + poner el código 17 y confirmar con el derecho. Con el derecho se va pasando por d.-- (diagnóstico), P.-- (programas de test), F.-- (errores) y otra vez d.--. En P.-- elegir el programa con – o + y confirmar con el derecho: arranca. Con el derecho alternan la temperatura de ida y la presión; con el izquierdo se vuelve al programa; el izquierdo otra vez: OFF; el izquierdo dos veces: End y pantalla inicial. El izquierdo también interrumpe un ajuste o sale del nivel especialista."],
       ["P.00","info","Purga: la bomba funciona y para a intervalos; 3 min el circuito de agua caliente y luego 1 min el de calefacción","Se puede detener a mano."],
       ["P.01","info","Quemador con potencia ajustable: tras el encendido, de 0 % (mínima) a 100 % (máxima) durante 15 min","Para medir el CO₂ a máxima potencia se usa el valor 100."],
       ["P.02","info","Quemador con carga de encendido, funciona durante 15 min en calefacción o agua caliente",""],
       ["P.06","info","Modo llenado: válvula de prioridad en posición intermedia, quemador y bomba parados","Sirve para llenar y vaciar el aparato."],
       ["Purga rápida","info","Purga automática: se activa si la presión baja de 0,3 bar más de 15 s y luego sube de 0,7 bar","Dura 4 min en el circuito de agua caliente y 6 min en el de calefacción. No se puede parar a mano."],
-      ["d.xx","info","Menú de diagnóstico (nivel especialista, código 17)","Con las flechas se elige el código d.xx; se confirma, se cambia el valor y se vuelve a confirmar. Si no se puede cambiar, sale «no». Algunos códigos no aparecen según el modelo."],
+      ["d.xx", "info", "Menú de diagnóstico (nivel especialista, código 17)", "Con – o + elegir el código d.xx y confirmar con el botón derecho; con – o + cambiar el valor y confirmar con el derecho. Con el izquierdo se vuelve atrás; dos veces el izquierdo sale a la pantalla inicial. Si el valor no se puede cambiar, sale «no». Algunos códigos no aparecen según el modelo."],
       ["d.00","info","Potencia máxima de calefacción: fija o automática","Con «Auto» la caldera adapta la potencia a la instalación."],
       ["d.01","info","Tiempo de marcha en inercia de la bomba en calefacción","De 1 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo máximo de bloqueo del quemador en calefacción","De 2 a 60 min. De fábrica 20."],
@@ -5010,7 +5010,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.96","info","Volver a los ajustes de fábrica","0 = no; 1 = sí. Cuidado: borra los ajustes que se hayan hecho."]
     ],
     vaillant_pure_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado (Live Monitor)","Pulsar a la vez las dos teclas indicadas en el panel (una lleva «i»): aparece S.xx con la temperatura de ida y la presión de la instalación. Con la tecla indicada se vuelve a la pantalla inicial. Con calefacción debe verse S.04; con agua caliente, S.14."],
+      ["S.xx", "info", "Cómo ver los códigos de estado (Live Monitor)", "Pulsar a la vez los botones de selección izquierdo y derecho («i»): aparece S.xx con la temperatura de ida y la presión de la instalación. Con el izquierdo se vuelve a la pantalla inicial. Con calefacción debe verse S.04; con agua caliente, S.14."],
       ["S.00","info","Calefacción: sin demanda",""],
       ["S.01","info","Calefacción: el ventilador arranca",""],
       ["S.02","info","Calefacción: la bomba arranca (caudal)",""],
@@ -5084,12 +5084,12 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["Err","electronica","Fallo de comunicación entre pantalla y placa","Revisar cable y conector entre la pantalla y la placa."]
     ],
     vaillant_pro_prog: [
-      ["P.xx","info","Cómo activar los programas de test (ecoTEC pro)","Pulsar a la vez las dos teclas indicadas en el panel (una lleva «i»): aparece S.xx. Pulsar la tecla indicada para entrar al nivel especialista: sale «Code --». Poner 17 con las flechas y confirmar. Con la tecla indicada se pasa por los programas de test (P), los códigos de error (F) y de nuevo por los de diagnóstico (D). Elegir con las flechas y confirmar. Para salir, pulsar la tecla de cancelar."],
+      ["P.xx", "info", "Cómo activar los programas de test (ecoTEC pro)", "Pulsar a la vez los botones de selección izquierdo y derecho («i»): aparece S.xx. Pulsar el derecho para entrar al nivel especialista: sale «Code --». Poner 17 con – o + y confirmar con el derecho. Con el derecho se pasa por los programas de test (P), los códigos de error (F) y de nuevo los de diagnóstico (D); elegir el valor con – o + y confirmar con el derecho. Para ir a los programas de test: nivel especialista y una pulsación del derecho. Para interrumpir un ajuste o salir del nivel especialista, pulsar el izquierdo."],
       ["P.00","info","Purga: la bomba funciona por ciclos y se purgan el circuito de calefacción y el de agua caliente","Aflojar la caperuza del purgador automático. Una pulsación inicia la purga de calefacción (9 ciclos de 30 s encendida y 20 s parada) y, al terminar o al pulsar otra vez, pasa a agua caliente. Cada circuito dura 7,5 min y termina solo. En pantalla se ve qué circuito está activo."],
       ["P.01","info","Carga máxima: tras el encendido la caldera funciona a su potencia máxima","Se usa para medir y ajustar el CO₂."],
       ["P.02","info","Carga mínima: tras el encendido la caldera funciona a su potencia mínima",""],
       ["P.06","info","Modo llenado: válvula de 3 vías en posición intermedia, quemador y bomba parados","Para llenar y vaciar el aparato."],
-      ["D.xxx","info","Menú de diagnóstico (nivel especialista, código 17)","Se elige el código con las flechas y se confirma; si se puede cambiar, se pone el valor y se confirma. Algunos códigos no aparecen según el modelo."],
+      ["D.xxx", "info", "Menú de diagnóstico (nivel especialista, código 17)", "Con – o + elegir el código y confirmar con el botón derecho; si se puede cambiar, poner el valor con – o + y confirmar con el derecho. Para salir, el izquierdo. Algunos códigos no aparecen según el modelo."],
       ["D.000","info","Carga parcial de calefacción en kW","De fábrica: automático."],
       ["D.001","info","Tiempo de marcha en inercia de la bomba en calefacción","De 1 a 60 min. De fábrica 5."],
       ["D.002","info","Tiempo máximo de bloqueo del quemador en calefacción","De 2 a 60 min. De fábrica 20."],
@@ -5137,7 +5137,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["D.096","info","Volver a los ajustes de fábrica","Cuidado: borra los ajustes hechos."]
     ],
     vaillant_pro_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado (Live Monitor)","Pulsar a la vez las dos teclas indicadas en el panel (una lleva «i»): aparece S.xx. Con calefacción debe verse S.04; con agua caliente, S.14 (o S.24 con acumulador)."],
+      ["S.xx", "info", "Cómo ver los códigos de estado (Live Monitor)", "Pulsar a la vez los botones de selección izquierdo y derecho («i»): aparece S.xx. Con calefacción debe verse S.04; con agua caliente, S.14 (o S.24 con acumulador)."],
       ["S.00","info","Calefacción: sin demanda de calor","El quemador está apagado."],
       ["S.01","info","Calefacción: arranque del ventilador",""],
       ["S.02","info","Calefacción: la bomba arranca",""],
@@ -5277,7 +5277,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["I.144","info","Aviso: el electrodo de control está muy envejecido","Cambiarlo y reiniciar la desviación en D.146 y D.147."]
     ],
     vaillant_plusvmi_prog: [
-      ["P.xxx","info","Cómo activar los programas de test (ecoTEC plus VM, VMW y VMI)","Menú → Ajustes → Nivel profesional autorizado y poner el código 17. Después Modos de prueba → Programas de comprobación, elegir el programa con la barra de desplazamiento y confirmar. En P.001 primero se pide la carga. Con un código L.xxx activo algunos programas quedan bloqueados."],
+      ["P.xxx", "info", "Cómo activar los programas de test (ecoTEC plus VM, VMW y VMI)", "Teclas de esta caldera: ≡ menú, ✓ confirmar, ← atrás, ? información. Menú → Ajustes → Nivel profesional autorizado y confirmar con ✓; poner el código 17 y confirmar con ✓. Después Modos de prueba → Programas de comprobación, elegir el programa con la barra de desplazamiento y confirmar con ✓. En P.001 primero se pide la carga. Con ? se ve el Resumen de datos. Para salir: pulsar ≡. Con un código L.xxx activo algunos programas quedan bloqueados."],
       ["P.000","info","Purga: la bomba funciona por ciclos y se purgan calefacción y agua caliente","Aflojar la tapa del purgador rápido. Una pulsación inicia la purga de calefacción y otra la termina. Una cuenta atrás indica la duración y el programa acaba solo."],
       ["P.001","info","Carga ajustable: tras el encendido la caldera funciona con la carga que se elija",""],
       ["P.003","info","Carga máxima de calefacción: funciona con la carga parcial de calefacción ajustada en D.000",""],
@@ -5335,7 +5335,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["D.182","info","Desviación de la válvula de gas (segunda parte)",""]
     ],
     vaillant_plusvmi_estado: [
-      ["S.xxx","info","Cómo ver los códigos de estado","Menú → Información → Código de estado."],
+      ["S.xxx", "info", "Cómo ver los códigos de estado", "Menú → Información → Código de estado. Salir: pulsar ≡."],
       ["S.000","info","Calefacción: sin demanda",""],
       ["S.001","info","Calefacción: arranca el ventilador",""],
       ["S.002","info","Calefacción: la bomba arranca",""],
@@ -5435,13 +5435,13 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.97","electronica","Fallo de autocomprobación de la placa principal","Placa defectuosa."]
     ],
     vaillant_intro_prog: [
-      ["P.xx","info","Cómo activar los programas de test (ecoTEC intro)","Pulsar varias veces una tecla táctil (la de la derecha) hasta que parpadee el símbolo. Poner el código 17 con las flechas y confirmar: aparece el menú d. Elegir con las flechas «Programas de comprobación P.» y confirmar. Elegir el programa y confirmar para iniciarlo; termina solo al acabar el tiempo. Para cancelarlo, pulsar la tecla de atrás: se ve «oF» 10 s."],
+      ["P.xx", "info", "Cómo activar los programas de test (ecoTEC intro)", "Pulsar varias veces la tecla menú (≡) hasta que parpadee el símbolo de la llave inglesa. Poner el código 17 con – o + y confirmar con ✓: aparece el menú d. Con – o + elegir el menú «Programas de comprobación P.» y confirmar con ✓; con – o + elegir el programa y confirmar con ✓ para iniciarlo; termina solo al acabar el tiempo y vuelve al menú P. Para cancelarlo antes, pulsar ←: se ve «oF» 10 s. Para salir de los programas: ←."],
       ["P.00","info","Purga: 4 min en el circuito de agua caliente y 1 min en calefacción","La bomba funciona y para a intervalos. Dura 5 min en total."],
-      ["P.01","info","Quemador con carga de calefacción ajustable, de 0 % (mínima) a 100 % (máxima) durante 15 min","Se ajusta con las flechas."],
+      ["P.01","info","Quemador con carga de calefacción ajustable, de 0 % (mínima) a 100 % (máxima) durante 15 min","Se ajusta con – y +."],
       ["P.03","info","Quemador a carga parcial: la ajustada en d.00, durante 15 min",""],
       ["P.04","info","Modo de análisis de combustión: agua caliente a máxima carga; sin demanda, la carga parcial de d.00","Dura 15 min."],
       ["P.08","info","Llenado o vaciado: válvula de 3 vías en el centro, quemador y bomba parados","Dura 15 min."],
-      ["d.xx","info","Menú de diagnóstico (código 17)","Elegir «d.» en el menú, confirmar, elegir el código con las flechas, confirmar, cambiar el valor y confirmar."],
+      ["d.xx", "info", "Menú de diagnóstico (código 17)", "Con – o + elegir «d.» en el menú y confirmar con ✓ (sale 00). Con – o + elegir el código, confirmar con ✓, cambiar el valor con – o + y confirmar con ✓. Para salir: ←."],
       ["d.00","info","Potencia máxima de calefacción","«Au» = automática."],
       ["d.01","info","Tiempo de marcha en inercia de la bomba","De 1 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo máximo de bloqueo del quemador","De 2 a 60 min. De fábrica 20."],
@@ -5484,7 +5484,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.191","info","Ajuste de la potencia de la bomba (%)","De fábrica 15."]
     ],
     vaillant_intro_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Pulsar varias veces la tecla hasta que parpadee el símbolo y poner el código 17. Elegir «Códigos de estado S.» y confirmar: alterna el código, la temperatura de ida y la presión."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Pulsar varias veces ≡ hasta que parpadee la llave inglesa y poner el código 17 con – o + y ✓. Con – o + elegir «Códigos de estado S.» y confirmar con ✓: alterna el código, la temperatura de ida y la presión. Para salir: ←."],
       ["S.00","info","Calefacción: sin demanda de calor","El quemador está apagado."],
       ["S.01","info","Calefacción: arranca el ventilador",""],
       ["S.02","info","Calefacción: la bomba arranca",""],
@@ -5570,13 +5570,13 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.97","electronica","Fallo de autocomprobación de la placa principal","Placa de circuitos defectuosa."]
     ],
     saunier_tek_prog: [
-      ["P.xx","info","Cómo activar los programas de test (ThemaTek / SemiaTek Condens)","Pulsar varias veces la tecla hasta que parpadee el símbolo. Poner el código 96 (acceso profesional) con las flechas y confirmar: aparece el menú d. Elegir «Programas de comprobación P.» con las flechas y confirmar; elegir el programa y confirmar para iniciarlo. Termina solo al acabar el tiempo. Para cancelarlo, pulsar la tecla de atrás: se ve «oF» 10 s."],
+      ["P.xx", "info", "Cómo activar los programas de test (ThemaTek / SemiaTek Condens)", "Pulsar varias veces la tecla menú (≡) hasta que parpadee el símbolo de la llave inglesa. Poner el código 96 (acceso profesional) con – o + y confirmar con ✓: aparece el menú d. Con – o + elegir el menú «Programas de comprobación P.» y confirmar con ✓; con – o + elegir el programa y confirmar con ✓ para iniciarlo. Termina solo al acabar el tiempo y vuelve al menú P. Para cancelarlo antes, pulsar ←: se ve «oF» 10 s. Para salir de los programas: ←."],
       ["P.00","info","Purga: 4 min en el circuito de agua caliente y 1 min en calefacción","La bomba funciona y para a intervalos. Dura 5 min en total."],
-      ["P.01","info","Quemador con carga de calefacción ajustable, de 0 % (mínima) a 100 % (máxima, «Hi»)","Se ajusta con las flechas. Dura 15 min."],
+      ["P.01","info","Quemador con carga de calefacción ajustable, de 0 % (mínima) a 100 % (máxima, «Hi»)","Se ajusta con – y +. Dura 15 min."],
       ["P.03","info","Quemador a carga parcial: la ajustada en d.00","Dura 15 min."],
       ["P.04","info","Modo de análisis de combustión: agua caliente a máxima carga; sin demanda, la carga parcial de d.00","Dura 15 min."],
       ["P.08","info","Llenado o vaciado: válvula de 3 vías en el centro, quemador y bomba parados","Dura 15 min."],
-      ["d.xx","info","Menú de diagnóstico (código de acceso 96)","Elegir «d.» en el menú, confirmar (sale 00), elegir el código con las flechas, confirmar, cambiar el valor y confirmar."],
+      ["d.xx", "info", "Menú de diagnóstico (código de acceso 96)", "Con – o + elegir «d.» en el menú y confirmar con ✓ (sale 00). Con – o + elegir el código, confirmar con ✓, cambiar el valor con – o + y confirmar con ✓. Para salir de los códigos de diagnóstico: ←."],
       ["d.00","info","Potencia máxima de calefacción","«Au» = automática (de fábrica)."],
       ["d.01","info","Tiempo de marcha en inercia de la bomba","De 1 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo máximo de bloqueo del quemador","De 2 a 60 min. De fábrica 20."],
@@ -5630,7 +5630,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.192","info","Rango de modulación en calefacción","0 = potencia de calefacción con 20 %; 1 = con 15 %."]
     ],
     saunier_tek_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Pulsar varias veces la tecla hasta que parpadee el símbolo y poner el código 96. Elegir «Códigos de estado S.» y confirmar: alterna el código, la temperatura de ida y la presión."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Pulsar varias veces ≡ hasta que parpadee la llave inglesa y poner el código 96 con – o + y ✓. Con – o + elegir «Códigos de estado S.» y confirmar con ✓: alterna el código, la temperatura de ida y la presión."],
       ["S.00","info","Calefacción: sin demanda de calor","El quemador está apagado."],
       ["S.01","info","Calefacción: arranca el ventilador",""],
       ["S.02","info","Calefacción: la bomba arranca",""],
@@ -5835,7 +5835,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.89","agua","Error de bomba","Bomba no o mal conectada, o cortocircuito en el mazo de cables."]
     ],
     saunier_thelia_condens_prog: [
-      ["P.xx","info","Cómo activar los programas de test (Thelia / Semia Condens)","Mantener pulsada la tecla más de 5 s: la pantalla muestra todos los símbolos. Volver a pulsar la tecla 5 s. Con las teclas + y − elegir el programa y confirmar: sale «on» y arranca. Para salir de un programa en marcha, pulsar a la vez las dos teclas indicadas en el manual; con otra tecla se vuelve al programa y con otra más se termina. (El manual solo da los símbolos de las teclas, que no se leen en el PDF.)"],
+      ["P.xx", "info", "Cómo activar los programas de test (Thelia / Semia Condens)", "Teclas de esta caldera: «mode», – , + y la de encendido (⏻). Mantener pulsada la tecla de encendido (⏻) más de 5 s: la pantalla muestra todos los símbolos. Después pulsar «mode» 5 s: sale P.01. Con – o + elegir el programa y confirmar con «mode»: sale «on» y arranca. Con el programa en marcha, pulsar a la vez – y + para ver alternativamente la temperatura de ida y la presión de llenado; «mode» para volver al programa. Para terminar: «mode» (sale OFF) y luego «mode» 3 s (sale End y vuelve a la pantalla inicial). Si no se toca ninguna tecla en 15 min, se interrumpe solo."],
       ["P.01","info","Quemador a carga ajustable, de 0 % (mínima) a 100 % (máxima)","Una vez encendido, funciona con la carga ajustada. Dura 15 min."],
       ["P.02","info","Quemador con carga de encendido","Tras el encendido funciona con la carga de encendido. Dura 15 min."],
       ["P.03","info","Quemador a la carga máxima de calefacción ajustada en d.00",""],
@@ -5844,7 +5844,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["P.06","info","Purgado del circuito de calefacción","Válvula de prioridad en calefacción; la bomba funciona y para a intervalos. Dura 15 min y se puede cortar a mano."],
       ["P.07","info","Purgado del circuito de agua caliente","4 min en el circuito pequeño de agua caliente y luego 1 min en calefacción. La bomba funciona y para a intervalos. Se puede cortar a mano."],
       ["P.xx","info","Función de purgado rápido","Si la presión baja de 0,3 bar y luego supera 0,5 bar durante más de 15 s, se activa sola: 4 min en agua caliente y 1 min en calefacción. No se puede cortar a mano."],
-      ["d.xx","info","Menú de diagnóstico (código 96; 35 es solo del servicio técnico)","Pulsar la tecla 7 s: aparece el menú. Con + y − poner el código 96 y confirmar. Elegir el código d., confirmar, cambiar el valor y confirmar. Si el código no se muestra, es que ese aparato no lo usa."],
+      ["d.xx", "info", "Menú de diagnóstico (código 96; 35 es solo del servicio técnico)", "Pulsar «mode» 7 s: aparece (0). Con – o + poner el código 96 y confirmar con «mode»: sale d.000. Con – o + elegir el código, «mode» para entrar, – o + para cambiar el valor. Si el valor parpadea 3 s se confirma solo (sale ✓ 1 s); o se confirma a mano pulsando «mode» menos de 3 s. Seguir con los demás parámetros y terminar con «mode» 3 s. Si el código no se muestra, es que ese aparato no lo usa."],
       ["d.00","info","Potencia máxima de calefacción","Varía según el modelo; ver datos técnicos. «Auto» = el aparato la adapta solo."],
       ["d.01","info","Tiempo de retorno de la bomba en calefacción","De 1 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo máximo de bloqueo del quemador en calefacción","De 2 a 60 min. De fábrica 20."],
@@ -5910,7 +5910,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.96","info","Volver a los ajustes de fábrica","0 = no; 1 = sí. Cuidado: borra los ajustes hechos."]
     ],
     saunier_thelia_condens_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Mantener pulsada la tecla más de 7 s: sale S.XX, seguido de la temperatura de ida, la presión y la temperatura del acumulador (según equipo). Para salir, pulsar la tecla indicada en el manual."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Mantener pulsada la tecla + más de 7 s: sale S.XX, seguido de la temperatura de ida, la presión y la temperatura del acumulador (según equipo). Para salir, pulsar «mode»."],
       ["S.00","info","Calefacción: sin demanda","El manual lo escribe «S.0»."],
       ["S.01","info","Calefacción: arranca el ventilador",""],
       ["S.02","info","Calefacción: caudal de la bomba",""],
@@ -6059,7 +6059,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["I.144","info","Electrodo de regulación envejecido","Cambiar el electrodo y restablecer la deriva con D.146 y D.147."]
     ],
     saunier_mc_prog: [
-      ["P.xx","info","Cómo entrar en el nivel del profesional","Pulsar la tecla hasta que se muestre el símbolo de llave, poner el código 96 y confirmar. Después elegir en el menú: «d.» diagnóstico, «P.» programas de comprobación, «t.» prueba de actuadores, «S» estados. Para salir, pulsar varias veces la tecla de retroceso hasta volver a la pantalla básica. (Los símbolos de las teclas no se leen bien en el PDF.)"],
+      ["P.xx", "info", "Cómo entrar en el nivel del profesional (código 96)", "Pulsar la tecla menú (≡) hasta que salga el símbolo de la llave inglesa. Poner el código 96 con – y + y confirmar con ✓. Después, con ≡ elegir el menú y confirmar con ✓: «d.» diagnóstico, «P.» programas de comprobación, «t.» prueba de actuadores, «S» estados. En P. (sale P.000) y t. (sale t.001) se elige con – y + y se confirma una vez con ✓ para que arranque. Para salir: ← varias veces hasta la pantalla básica."],
       ["P.000","info","Purgado del circuito de calefacción y del de agua caliente","La bomba funciona por ciclos y se purgan los dos circuitos con el purgador rápido (con su tapa suelta). Se pulsa una vez para iniciar el de calefacción y otra para terminar; una cuenta atrás muestra el tiempo."],
       ["P.001","info","Quemador a la carga de calentamiento ajustada","Tras el encendido funciona con la carga que se pide al iniciar el programa."],
       ["P.003","info","Quemador a carga parcial de calefacción ajustada en D.000",""],
@@ -6071,7 +6071,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["t.005","info","Prueba de actuador: bomba de circulación","Se conecta y desconecta."],
       ["t.006","info","Prueba de actuador: bomba externa","Se conecta y desconecta."],
       ["t.007","info","Prueba de actuador: encendido del aparato","Se enciende y funciona a carga mínima; la pantalla muestra la temperatura de entrada."],
-      ["d.xx","info","Menú de diagnóstico (código 96)","Elegir «d.» en el menú y confirmar (sale d.000). Con las flechas elegir el código, confirmar, cambiar el valor y confirmar. Estos aparatos usan tres cifras (d.000, d.001...)."],
+      ["d.xx", "info", "Menú de diagnóstico (código 96)", "Con ≡ elegir el menú d. y confirmar con ✓ (sale d.000). Con – y + elegir el código, confirmar con ✓, cambiar el valor con – y + y confirmar de nuevo con ✓. Estos aparatos usan tres cifras (d.000, d.001...). Para salir: ← varias veces."],
       ["d.000","info","Carga máxima en calefacción","«Auto» de fábrica: el aparato adapta la carga a la instalación. El rango está en los datos técnicos."],
       ["d.001","info","Retardo de paro de la bomba de calefacción","De 1 a 60 min. De fábrica 5."],
       ["d.002","info","Tiempo máximo de bloqueo del quemador","De 2 a 60 min. De fábrica 20."],
@@ -6168,7 +6168,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.182","info","Desviación del motor paso a paso de la válvula de gas 2","Para válvulas con desviación de 5 cifras (gas licuado)."]
     ],
     saunier_mc_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Entrar al nivel del profesional (código 96), elegir «S» en el menú y confirmar. Si hay varios estados a la vez, se cambia de uno a otro con las flechas."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Entrar al nivel del especialista (≡ hasta la llave inglesa, código 96 y ✓), elegir con ≡ el menú S (parpadea) y confirmar con ✓. Si hay varios estados a la vez, se cambia de uno a otro con – y +. Para salir: ← varias veces."],
       ["S.000","info","Para el modo calefacción no hay ningún requerimiento",""],
       ["S.001","info","Calefacción activa: el ventilador se encuentra en la ida",""],
       ["S.002","info","Calefacción activa: la bomba de agua se encuentra en la ida",""],
@@ -6383,7 +6383,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["--","electronica","Fallo de la interfaz de usuario (sin código)","Placa de interfaz defectuosa: sustituirla."]
     ],
     saunier_tp_prog: [
-      ["P.xx","info","Cómo entrar en los modos de test","Apagar el aparato con el botón de marcha/paro. Mantener pulsada la tecla de modo más de 5 s y pulsar a la vez el botón de marcha/paro: sale «P01» y «Off». Con las teclas +/- elegir el modo. Para salir, pulsar RESET o apagar y encender. (El símbolo de la tecla no se lee en el PDF.)"],
+      ["P.xx", "info", "Cómo entrar en los modos de test", "Apagar el aparato con el botón de marcha/paro. Con la tecla «mode» mantenida más de 5 s, pulsar a la vez el botón de marcha/paro: sale «P01» y «Off». Con la + o la – de calefacción (la del símbolo del radiador) elegir el modo. Para salir, pulsar el botón de marcha/paro. (Según el manual francés original.)"],
       ["P.01","info","Forzado del quemador a potencia ajustable en calefacción","Pulsar para ver el ajuste («P.01» y «0») y cambiarlo de 0 % (Pmín.) a 100 % (Pmáx.) con +/-. Salir: 1 s; más de 7 s para ir al menú de parámetros."],
       ["P.02","info","Forzado del quemador a potencia de encendido","Tras un encendido correcto funciona a la potencia de encendido. Se para solo a los 15 min."],
       ["P.03","info","Forzado del quemador a Pmáx. en calefacción","Tras un encendido correcto funciona a potencia máxima. Se para solo a los 15 min."],
@@ -6391,7 +6391,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["P.06","info","Purga de la instalación de calefacción","Activo 5 min en el circuito de calefacción. Comprobar que el purgador esté abierto."],
       ["P.07","info","Purga del aparato (circuito corto)","Activo 5 min en el circuito corto. Comprobar que el purgador esté abierto."],
       ["CO2","info","Valores de CO₂ para ajustar a potencia máxima","Poner P.01 al 100 %, esperar unos 5 min y ajustar con el tornillo de potencia máxima. Con frontal abierto: G20 9 ± 0,2; G25 8,8 ± 0,2; G31 10,1 ± 0,2. Con frontal cerrado: G20 9,2 ± 0,3; G25 9 ± 0,3; G31 10,3 ± 0,3."],
-      ["d.xx","info","Cómo entrar en los parámetros (código 96)","Pulsar más de 7 s la tecla indicada: sale «0». Pulsar 4 veces la tecla +: sale «96» (clave del instalador). Confirmar y sale d.00 con su valor. Con +/- elegir el parámetro y cambiar su valor. Para salir, pulsar más de 3 s. (Símbolos de teclas ilegibles en el PDF.)"],
+      ["d.xx", "info", "Cómo entrar en los parámetros (código 96)", "Pulsar «mode» más de 7 s: sale «0». Pulsar 4 veces la tecla –: sale «96» (clave del instalador). Confirmar con «mode»: sale d.00 con su valor. Con la + o la – de agua caliente (símbolo del grifo) elegir el parámetro y con la + o la – de calefacción (radiador) cambiar su valor. Repetir para cada parámetro. Para salir, «mode» más de 3 s. (Según el manual francés original.)"],
       ["d.00","info","Potencia máxima en calefacción","F25: de 5 a 18 kW (de fábrica 15). F30: de 6 a 25 kW (15). F35: de 8 a 30 kW (20)."],
       ["d.01","info","Tiempo de postfuncionamiento de la bomba en calefacción","De 2 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo de bloqueo del quemador en calefacción (anticiclos cortos)","De fábrica 20 min. A 80 °C queda fijo en 2 min; a 10 °C se puede ajustar de 2 a 60."],
@@ -6420,7 +6420,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.94","info","Borrar la lista de fallos","0 = no (de fábrica); 1 = borrar. La lista guarda los 5 últimos fallos (se ve pulsando a la vez las teclas +/- más de 7 s)."]
     ],
     saunier_tp_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Pulsar más de 3 s la tecla de modo para ver el estado; otros 3 s para salir."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Pulsar la tecla – de calefacción (la del símbolo del radiador) más de 3 s para ver el estado; «mode» más de 3 s para salir. (Según el manual francés original.)"],
       ["S.00","info","Calefacción: sin demanda",""],
       ["S.01","info","Calefacción: prebarrido del ventilador",""],
       ["S.02","info","Calefacción: prebarrido de la bomba",""],
@@ -6627,15 +6627,15 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.85","sensor","Sonda de temperatura de ida y retorno montada incorrectamente (intercambiadas)","NTC de entrada y de retorno montados en el mismo tubo/tubo erróneo → Compruebe si el NTC de entrada y de retorno están montados en el tubo correcto."]
     ],
     saunier_tm_prog: [
-      ["P.xx","info","Cómo entrar en los programas de comprobación","Pulsar a la vez las dos teclas indicadas durante 3 segundos (los símbolos no se leen en el PDF). Con las flechas elegir el programa y confirmar con la tecla de confirmación. Para salir del programa pulsar la tecla de retroceso; 3 segundos más para volver a la pantalla básica. Si no se toca ninguna tecla en 15 minutos, el programa se interrumpe solo."],
-      ["P.01","info","Quemador a potencia ajustable en calefacción","Funciona a la potencia que se ponga de 0 % (Pmín.) a 100 % (Pmáx.) con las flechas, tras el encendido. Si el caudal del circuito es insuficiente se reduce la potencia; si no llega ni para la potencia mínima, no se enciende y queda en espera (código de estado S.85)."],
+      ["P.xx", "info", "Cómo entrar en los programas de comprobación", "La caldera tiene la tecla «mode» y dos pares de teclas – / +: uno bajo el símbolo del grifo (agua caliente) y otro bajo el del radiador (calefacción). Pulsar a la vez «mode» y la + de calefacción durante 3 segundos. Con – o + (grifo) elegir el programa. Confirmar con «mode»: arranca. Para salir del programa, «mode»; otros 3 segundos con «mode» para volver a la pantalla básica. Si no se toca ninguna tecla en 15 minutos, el programa se interrumpe solo."],
+      ["P.01","info","Quemador a potencia ajustable en calefacción","Funciona a la potencia que se ponga de 0 % (Pmín.) a 100 % (Pmáx.), tras el encendido, con la + de calefacción (o la –). Si el caudal del circuito es insuficiente se reduce la potencia; si no llega ni para la potencia mínima, no se enciende y queda en espera (código de estado S.85)."],
       ["P.02","info","Quemador a la carga de encendido","Tras un encendido correcto funciona a la carga de encendido."],
       ["P.03","info","Quemador a demanda de calor máxima","Tras un encendido correcto funciona a la carga máxima (código d.000)."],
       ["P.04","info","Modo de análisis de combustión","Tras un encendido correcto funciona a la carga máxima (d.000), para medir la combustión."],
       ["P.05","info","No activo en este producto",""],
       ["P.06","info","Purga de la instalación de calefacción","Se activa 5 minutos en el circuito de calefacción. El purgado se hace por el sistema de separación de aire."],
       ["P.07","info","Purga del circuito de agua caliente del aparato","Se activa 5 minutos en el circuito corto. El purgado se hace por el sistema de separación de aire."],
-      ["d.xx","info","Cómo entrar en los códigos de diagnóstico (código 96)","Pulsar 7 segundos la tecla indicada, poner el código de acceso con las flechas: 96 = profesional autorizado (35 = nivel de mantenimiento, solo para el Servicio Técnico) y confirmar. Con las flechas elegir el código d.xxx, confirmar, cambiar el valor y seguir con los demás. Para salir, pulsar 5 segundos la tecla de retroceso."],
+      ["d.xx", "info", "Cómo entrar en los códigos de diagnóstico (código 96)", "Pulsar «mode» 7 segundos. Con – y + (grifo) poner el código de acceso: 96 = profesional autorizado (35 = nivel de mantenimiento, solo para el Servicio Técnico) y confirmar con «mode». Con – y + (grifo) elegir el código d.xxx; con – y + (calefacción) cambiar su valor. Seguir con los demás parámetros. Para salir, pulsar «mode» 5 segundos."],
       ["d.000","info","Carga parcial de calefacción","carga parcial de calefacción regulable en kW. De fábrica: Tenga en cuenta los datos técnicos."],
       ["d.001","info","Tiempo de retardo de la bomba interna después de una demanda de calor","2 … 60 min. De fábrica: 5 min"],
       ["d.002","info","Tiempo de bloqueo máx. durante el modo de calefacción a 20 °C de temperatura de ida","2 … 60 min. De fábrica: 20 min"],
@@ -6708,7 +6708,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.149","info","Información precisa sobre el error de circulación F.75","Al salir F.75, ver el valor: 0 = sin error; 1 = bomba bloqueada; 2 = error eléctrico de la bomba; 3 = marcha en seco de la bomba; 4 = alarma de la bomba (tensión demasiado baja); 5 = fallo del sensor de presión; 6 = sin respuesta de la bomba; 7 = bomba errónea detectada; 8 = caudal insuficiente al final del programa de purgado"]
     ],
     saunier_tm_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Pulsar a la vez las dos teclas indicadas durante 3 segundos: sale el estado actual «S.XX». Para volver a la pantalla básica, pulsar la tecla de retroceso."],
+      ["S.xx", "info", "Cómo ver los códigos de estado", "Pulsar a la vez la – de agua caliente (grifo) y la – de calefacción (radiador) durante 3 segundos: sale el estado actual «S.XX». Para volver a la pantalla básica, pulsar «mode»."],
       ["S.0","info","Calefacción: demanda de calefacción","El manual escribe los estados de una cifra como S.0, S.1... (en pantalla pueden salir S.00, S.01...)."],
       ["S.1","info","Calefacción: arranque del ventilador",""],
       ["S.2","info","Calefacción: arranque de la bomba",""],
@@ -6848,13 +6848,13 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["I.144", "llama", "Aviso: la prueba de deriva de electrodos indica un envejecimiento avanzado del electrodo de regulación", "Sustituir el electrodo de regulación y restablecer la desviación de la deriva mediante D.146 y D.147."]
     ],
     saunier_ifhc_prog: [
-      ["Acceso", "info", "Cómo entrar al nivel del especialista (código 96)", "Menú → Ajustes → Nivel profesional autorizado, confirmar, poner el código 96 y confirmar. Para salir, pulsar la tecla de retroceso: vuelve a la pantalla básica. Los símbolos de las teclas no se leen en el PDF."],
-      ["P.xxx", "info", "Cómo ejecutar un programa de comprobación", "Nivel del especialista → Modos de prueba → Programas de comprobación. Elegir con la barra de desplazamiento y confirmar. Con P.001 pide primero la carga deseada (confirmar). Para terminar: tecla de retroceso y luego la de inicio. Los L.xxx activos pueden bloquear temporalmente los P.xxx."],
+      ["Acceso", "info", "Cómo entrar al nivel del especialista (código 96)", "Menú → Ajustes → Nivel profesional autorizado y confirmar con ✓. Poner el código 96 con la barra de desplazamiento y confirmar con ✓. Para salir: pulsar ≡ (vuelve a la pantalla básica). Teclas de esta caldera: ≡ menú, ✓ confirmar, ← atrás, ? información."],
+      ["P.xxx", "info", "Cómo ejecutar un programa de comprobación", "Nivel del especialista → Modos de prueba → Programas de comprobación. Elegir con la barra de desplazamiento y confirmar con ✓: arranca. Con P.001 pide primero la carga (ajustarla y confirmar con ✓). Con ? se ve el Resumen de datos mientras corre. Para terminar: ← y luego ≡. Los L.xxx activos pueden bloquear temporalmente los P.xxx."],
       ["P.000", "info", "Programa de purga", "La bomba interna se activa por ciclos y se purgan circuito de calefacción y de ACS con cambio automático de circuito por el purgador rápido (la tapa del purgador debe estar suelta). La pantalla muestra el circuito activo; una pulsación inicia el purgado del circuito de calefacción y otra lo termina. Cuenta atrás en pantalla."],
       ["P.001", "info", "Quemador a la carga de calentamiento ajustada", "Tras el encendido, funciona con la carga que se pide al iniciar el programa."],
       ["P.003", "info", "Quemador a la carga parcial ajustada en D.000", "Tras el encendido, funciona con la carga parcial de calefacción ajustada en D.000."],
       ["P.008", "info", "Válvula de 3 vías en posición media", "Quemador y bomba desconectados (para llenar y vaciar el aparato)."],
-      ["T.xxx", "info", "Cómo ejecutar una prueba del actuador", "Nivel del especialista → Modos de prueba → Prueba del actuador. Elegir y confirmar. Los L.xxx activos pueden bloquear temporalmente los T.xxx."],
+      ["T.xxx", "info", "Cómo ejecutar una prueba del actuador", "Nivel del especialista → Modos de prueba → Prueba del actuador. Elegir con la barra de desplazamiento y confirmar con ✓: arranca. Con ? se ve el Resumen de datos. Para terminar: ← y luego ≡. Los L.xxx activos pueden bloquear temporalmente los T.xxx."],
       ["T.001", "info", "Bomba interna", "Se conecta y regula a la presión diferencial seleccionada."],
       ["T.002", "info", "Válvula de prioridad", "Pasa a posición de calefacción o de agua caliente."],
       ["T.003", "info", "Ventilador", "Se conecta y desconecta; funciona a la velocidad de giro máxima."],
@@ -6862,10 +6862,10 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["T.005", "info", "Bomba de circulación", "Se conecta y desconecta."],
       ["T.006", "info", "Bomba externa", "Se conecta y desconecta."],
       ["T.007", "info", "Encendido a carga mínima", "El aparato se enciende y funciona a carga mínima; la pantalla muestra la temperatura de entrada."],
-      ["Deshollinador", "info", "Modo deshollinador (análisis de combustión)", "Menú → Ajustes → Modo deshollinador. Elegir: carga de calentamiento ajustable, carga calorífica máx. de ACS o mín. de ACS, y confirmar. No medir hasta que el aparato lo indique. Dura 15 minutos (se interrumpe con la tecla de retroceso). S.093 = se está calibrando. S.059 = no se alcanza el caudal mínimo de calefacción para la carga elegida: aumentar la circulación."],
+      ["Deshollinador", "info", "Modo deshollinador (análisis de combustión)", "Pulsar ≡ y entrar en Menú → Ajustes → Modo deshollinador. Elegir: carga de calentamiento ajustable, carga calorífica máx. de ACS o mín. de ACS, y confirmar con ✓ (con la ajustable, poner la carga y confirmar con ✓). No medir hasta que el aparato lo indique. Dura 15 minutos (se interrumpe con ←). Con ? se ve el estado de funcionamiento. S.093 = se está calibrando. S.059 = no se alcanza el caudal mínimo de calefacción para la carga elegida: aumentar la circulación."],
       ["Historial", "info", "Historial de errores y de modo de emergencia", "En el nivel del especialista: Historial de errores (F.xxx) e Historial modo emergencia (L.xxx / N.xxx). Los errores solo se ven y se pueden borrar cuando se han producido. También con D.094."],
       ["Resumen", "info", "Resumen de datos", "Nivel del especialista → Resumen de datos: muestra el estado de funcionamiento actual."],
-      ["D.xxx", "info", "Cómo entrar en los códigos de diagnóstico", "Nivel del especialista → Códigos de diagnóstico. Elegir el código con la barra de desplazamiento, confirmar, elegir el valor y confirmar. Para salir, retroceso y luego inicio."],
+      ["D.xxx", "info", "Cómo entrar en los códigos de diagnóstico", "Nivel del especialista → Códigos de diagnóstico. Elegir el código con la barra de desplazamiento y confirmar con ✓; elegir el valor y confirmar con ✓. Para salir: ← y luego ≡."],
       ["D.000", "info", "Carga máx. en modo calefacción", "Carga parcial de calefacción: el rango de ajuste está en los datos técnicos (no todos los productos lo tienen). De fábrica: automático (el aparato adapta la carga parcial máxima a la necesidad de la instalación)."],
       ["D.001", "info", "Retardo de paro de la bomba de calefacción", "1 – 60 min. De fábrica: 5."],
       ["D.002", "info", "Tiempo máximo de bloqueo del quemador", "2 – 60 min (calefacción con 20 °C de ida). De fábrica: 20."],
@@ -6964,7 +6964,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["D.182", "info", "Desviación del motor paso a paso de la válvula de gas 2", "10 – 80: dos últimos dígitos de las válvulas de gas con desviación de 5 dígitos, para gas líquido."]
     ],
     saunier_ifhc_estado: [
-      ["S.xxx", "info", "Cómo ver los códigos de estado", "Menú → Información → Código de estado. Para salir, pulsar la tecla de retroceso y luego la de inicio. Algunos códigos pueden no salir en este modelo porque la tabla es común a varios productos."],
+      ["S.xxx", "info", "Cómo ver los códigos de estado", "Menú → Información → Código de estado. Para salir: ← y luego ≡. Algunos códigos pueden no salir en este modelo porque la tabla es común a varios productos."],
       ["S.000", "info", "Para el modo calefacción no hay ningún requerimiento.", ""],
       ["S.001", "info", "El modo calefacción está activo y el ventilador se encuentra en la ida.", ""],
       ["S.002", "info", "El modo calefacción está activo y la bomba de agua se encuentra en la ida.", ""],
@@ -7088,7 +7088,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.363", "electronica", "EEPROM de la pantalla advierte de un error durante la prueba de lectura y escritura.", "Sobrescritura del acumulador errónea → Sustituya la pantalla."],
       ["F.707", "electronica", "No es posible establecer ninguna comunicación entre la pantalla y la placa de circuitos impresos.", "La comunicación eBUS entre la pantalla y la placa de circuitos impresos ha fallado → 1.     Compruebe la conexión entre pantalla y placa de circuitos impresos. 2.     Sustituya el cable entre la pantalla y la placa de circuitos impresos si es necesario. 3.     Sustituya la placa de circuitos impresos o la pantalla."],
       ["F.905", "electronica", "Interfaz de comunicación desconectada", "La comunicación con el módulo CIM está interrumpida → 1.     Compruebe la conexión entre el producto y el módulo CIM. 2.     Compruebe el módulo CIM y sustitúyalo si es necesario."],
-      ["L.xxx / N.xxx", "info", "Códigos de modo de emergencia", "L.xxx = reversibles: se anulan solos. N.xxx = irreversibles: necesitan intervención; la primera vez se puede intentar quitar la limitación con la tecla de eliminación de averías; si se repite, hacer las medidas de la tabla. Si salen varios N a la vez, hay que confirmarlos todos. Los L activos pueden bloquear temporalmente los programas P.xxx y las pruebas T.xxx."],
+      ["L.xxx / N.xxx", "info", "Códigos de modo de emergencia", "L.xxx = reversibles: se anulan solos. N.xxx = irreversibles: necesitan intervención; si salen varios a la vez hay que confirmarlos todos. Los L activos pueden bloquear temporalmente los programas P.xxx y las pruebas T.xxx."],
       ["N.013", "sensor", "La señal del sensor de presión del agua no es válida.", "Sensor de presión de agua defectuoso → Sustituya el sensor de presión de agua. · Interrupción en el mazo de cables → Compruebe el mazo de cables. · Cortocircuito en el cable de unión → Compruebe el cable de unión y sustitúyalo en caso necesario."],
       ["N.027", "sensor", "La señal del sensor de temperatura de la conexión de agua caliente sanitaria es no plausible.", "Sensor de temperatura averiado → Compruebe y, dado el caso, sustituya el sensor de temperatura. · Interrupción en el mazo de cables → Compruebe el mazo de cables. · El motor paso a paso de la válvula de conmutación está defectuoso → Inspeccione el motor paso a paso de la válvula de conmutación en busca de posibles daños mecánicos o eléctricos. · Interrupción en el mazo de cables de la válvula de conmutación → Compruebe si el mazo de cables al motor paso a paso y la placa de circuitos impresos está conectado correctamente. · Cal en el intercambiador de calor secundario. → Elimine la cal del intercambiador de calor afectado o sustituya el intercambiador de calor si es necesario. · El sensor de temperatura de la conexión de agua caliente sanitaria no está montado correctamente → Compruebe si el sensor de temperatura de la conexión de agua caliente sanitaria está montado correctamente en la tubería. · La válvula de ajuste de agua fría no está instalada (solo para productos sin limitador de caudal montado de fábrica) → Instale la válvula de ajuste de agua fría. · Caudal mal ajustado en la válvula de ajuste de agua fría (solo para productos sin limitador de caudal montado de fábrica) → Ajuste el caudal en la válvula de ajuste de agua fría."],
       ["N.032", "agua", "El sensor de caudal está defectuoso o la señal no es plausible.", "Aire en el sistema → Purgue el sistema. · Sensor de caudal defectuoso → Sustituya el sensor volumétrico. · El conducto de derivación está bloqueado (solo en caso de que el producto tenga conducto de derivación) → Elimine el bloqueo. · Aire en la bomba (solo en caso de que el producto tenga conducto de derivación) → Purgue el sistema. · Bomba defectuosa (solo en caso de que el producto tenga conducto de derivación) → Sustituya la bomba."],
@@ -7122,14 +7122,14 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["I.144", "llama", "Aviso: la prueba de deriva de electrodos indica un envejecimiento avanzado del electrodo de regulación", "Sustituir el electrodo de regulación y restablecer la desviación de la deriva mediante D.146 y D.147."]
     ],
     saunier_itmc_prog: [
-      ["Acceso", "info", "Cómo entrar al nivel del especialista (código 96)", "Pulsar la tecla indicada hasta que salga el símbolo del nivel del especialista, poner el código 96 y confirmar. Para salir, pulsar varias veces la tecla de retroceso hasta la pantalla básica. Los símbolos de las teclas no se leen en el PDF."],
-      ["C.xxx", "info", "Número del instalador (CALL)", "Nivel del especialista → menú «C», confirmar: sale CALL_. Con + y – elegir cada cifra y confirmar una a una; con la tecla de borrar se corrige la última. Al terminar, confirmar el número."],
-      ["P.xxx", "info", "Cómo ejecutar un programa de comprobación", "Nivel del especialista → elegir el menú «P.» y confirmar (sale P.000). Elegir el programa con las teclas + y –, y confirmar una vez: arranca. Con P.001 pide primero la carga. Para terminar: pulsar varias veces la tecla de retroceso hasta la pantalla básica. Los L.xxx activos pueden bloquear temporalmente los P.xxx."],
+      ["Acceso", "info", "Cómo entrar al nivel del especialista (código 96)", "Pulsar la tecla menú (≡) hasta que salga el símbolo de la llave inglesa. Poner el código 96 con – y + y confirmar con ✓. Para salir: tecla atrás (←)."],
+      ["C.xxx", "info", "Número del instalador (CALL)", "Nivel del especialista → con ≡ elegir el menú C (parpadea) y confirmar con ✓: sale CALL_. Con – y + elegir cada cifra y confirmar con ✓ una a una; con ← se borra la última. Al terminar, confirmar con ✓ mientras parpadea _."],
+      ["P.xxx", "info", "Cómo ejecutar un programa de comprobación", "Nivel del especialista → con ≡ elegir el menú P. y confirmar con ✓ (sale P.000). Elegir el programa con – y +, y confirmar con ✓ una vez: arranca. Con P.001 pide primero la carga. Para terminar: pulsar ← varias veces hasta la pantalla básica. Los L.xxx activos pueden bloquear temporalmente los P.xxx."],
       ["P.000", "info", "Programa de purga", "La bomba interna se activa por ciclos y se purgan circuito de calefacción y de ACS con cambio automático de circuito por el purgador rápido (la tapa del purgador debe estar suelta). La pantalla muestra el circuito activo; una pulsación inicia el purgado del circuito de calefacción y otra lo termina. Cuenta atrás en pantalla."],
       ["P.001", "info", "Quemador a la carga de calentamiento ajustada", "Tras el encendido, funciona con la carga que se pide al iniciar el programa."],
       ["P.003", "info", "Quemador a la carga parcial ajustada en D.000", "Tras el encendido, funciona con la carga parcial de calefacción ajustada en D.000."],
       ["P.008", "info", "Válvula de 3 vías en posición media", "Quemador y bomba desconectados (para llenar y vaciar el aparato)."],
-      ["T.xxx", "info", "Cómo ejecutar una prueba del actuador", "Nivel del especialista → elegir el menú del actuador «t.» y confirmar (sale t.001). Elegir la prueba con + y –, y confirmar una vez: arranca. Para terminar: varias veces la tecla de retroceso. En esta caldera la pantalla las muestra como t.001, t.002…"],
+      ["T.xxx", "info", "Cómo ejecutar una prueba del actuador", "Nivel del especialista → con ≡ elegir el menú t. y confirmar con ✓ (sale t.001). Elegir la prueba con – y +, y confirmar con ✓ una vez: arranca. Para terminar: ← varias veces. En la pantalla se ven como t.001, t.002…"],
       ["T.001", "info", "Bomba interna", "Se conecta y regula a la presión diferencial seleccionada."],
       ["T.002", "info", "Válvula de prioridad", "Pasa a posición de calefacción o de agua caliente."],
       ["T.003", "info", "Ventilador", "Se conecta y desconecta; funciona a la velocidad de giro máxima."],
@@ -7137,10 +7137,10 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["T.005", "info", "Bomba de circulación", "Se conecta y desconecta."],
       ["T.006", "info", "Bomba externa", "Se conecta y desconecta."],
       ["T.007", "info", "Encendido a carga mínima", "El aparato se enciende y funciona a carga mínima; la pantalla muestra la temperatura de entrada."],
-      ["Deshollinador", "info", "Modo deshollinador (análisis de combustión)", "Pulsar la tecla indicada hasta que salga el símbolo del deshollinador y confirmar. Con + y – elegir la carga: 1/3 = potencia ajustable entre la mínima y la máxima de calefacción; 2/3 = máximo rendimiento de agua caliente; 3/3 = potencia mínima. Confirmar (con 1/3, ajustar la carga y confirmar). No medir hasta que el aparato lo indique. Dura 15 minutos (se interrumpe con la tecla de retroceso). S.093 = se está calibrando. S.059 = no se alcanza el caudal mínimo de calefacción para la carga elegida: aumentar la circulación."],
-      ["Historial", "info", "Historial de errores", "Nivel del especialista → elegir el menú «F.»: salen los números de los errores ocurridos (como máximo los 10 últimos). Pasar de uno a otro con las teclas + y –. Para borrar la lista: D.094 = On."],
+      ["Deshollinador", "info", "Modo deshollinador (análisis de combustión)", "Pulsar ≡ hasta que salga el símbolo del deshollinador y confirmar con ✓. Con – y + elegir la carga: 1'3 = potencia ajustable entre la mínima y la máxima de calefacción; 2'3 = máximo rendimiento de agua caliente; 3'3 = potencia mínima. Confirmar con ✓ (con 1'3, ajustar la carga y confirmar con ✓). No medir hasta que el aparato lo indique. Dura 15 minutos (se interrumpe con ←). S.093 = se está calibrando. S.059 = no se alcanza el caudal mínimo de calefacción para la carga elegida: aumentar la circulación."],
+      ["Historial", "info", "Historial de errores", "Nivel del especialista → con ≡ elegir el menú F.: salen los números de los errores ocurridos (como máximo los 10 últimos). Pasar de uno a otro con – y +. Para borrar la lista: D.094 = On."],
       ["Lista S", "info", "Códigos de estado y modo de emergencia", "Nivel del especialista → lista de códigos S.xxx. Si en la lista aparece un N.xxx, hay un componente defectuoso."],
-      ["D.xxx", "info", "Cómo entrar en los códigos de diagnóstico", "Nivel del especialista → elegir el menú «d.» y confirmar (sale d.000). Elegir el código con + y –, confirmar, elegir el valor con + y – y confirmar de nuevo. Para salir: varias veces la tecla de retroceso hasta la pantalla básica."],
+      ["D.xxx", "info", "Cómo entrar en los códigos de diagnóstico", "Nivel del especialista → con ≡ (o – / +) elegir el menú d. y confirmar con ✓ (sale d.000). Elegir el código con – y +, confirmar con ✓, elegir el valor con – y + y confirmar de nuevo con ✓. Para salir: ← varias veces hasta la pantalla básica."],
       ["D.000", "info", "Carga máx. en modo calefacción", "Carga parcial de calefacción: el rango de ajuste está en los datos técnicos (no todos los productos lo tienen). De fábrica: automático (el aparato adapta la carga parcial máxima a la necesidad de la instalación)."],
       ["D.001", "info", "Retardo de paro de la bomba de calefacción", "1 – 60 min. De fábrica: 5."],
       ["D.002", "info", "Tiempo máximo de bloqueo del quemador", "2 – 60 min (calefacción con 20 °C de ida). De fábrica: 20."],
@@ -7239,7 +7239,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["D.182", "info", "Desviación del motor paso a paso de la válvula de gas 2", "10 – 80: dos últimos dígitos de las válvulas de gas con desviación de 5 dígitos, para gas líquido."]
     ],
     saunier_itmc_estado: [
-      ["S.xxx", "info", "Cómo ver los códigos de estado", "Nivel del especialista → elegir el menú «S» (parpadea), confirmar. Sale el estado actual; si hay varios a la vez se cambian con las teclas + y –. Para salir: varias veces la tecla de retroceso. Algunos códigos pueden no salir en este modelo porque la tabla es común a varios productos."],
+      ["S.xxx", "info", "Cómo ver los códigos de estado", "Nivel del especialista → con ≡ elegir el menú S (parpadea) y confirmar con ✓. Sale el estado actual; si hay varios a la vez se cambian con – y +. Para salir: ← varias veces hasta la pantalla básica. Algunos códigos pueden no salir en este modelo porque la tabla es común a varios productos."],
       ["S.000", "info", "Para el modo calefacción no hay ningún requerimiento.", ""],
       ["S.001", "info", "El modo calefacción está activo y el ventilador se encuentra en la ida.", ""],
       ["S.002", "info", "El modo calefacción está activo y la bomba de agua se encuentra en la ida.", ""],
