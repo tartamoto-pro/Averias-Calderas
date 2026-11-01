@@ -143,6 +143,23 @@ ul.codes li:first-child{border-top:0}
 }
 .t{font-weight:600}
 .h{font-size:.92rem;color:var(--muted);margin-top:2px}
+
+.xbs{display:grid;gap:10px}
+.xbs-b{margin-top:18px}
+.xb{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:16px;text-decoration:none;color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.22);transition:transform .12s,filter .12s;min-width:0}
+.xb:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.xb:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.xb .xi{flex:none;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.xb .xt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.xb .xt b{font-family:var(--font-head);font-weight:800;font-size:1.02rem;line-height:1.15;overflow-wrap:anywhere}
+.xb .xt small{font-size:.78rem;opacity:.88;line-height:1.25}
+.xb .xg{flex:none;opacity:.9;display:flex}
+.xb-pdf{background:linear-gradient(135deg,#dc2626,#9a1b1b)}
+.xb-foto{background:linear-gradient(135deg,#475569,#1e293b)}
+.xb-info{background:linear-gradient(135deg,var(--t1),var(--t2))}
+.back{display:inline-block;margin-bottom:8px;font-weight:700;color:var(--accent);text-decoration:none}
+.back:hover{text-decoration:underline}
+@media (min-width:640px){.xbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .ficha{display:inline-block;margin-top:10px;margin-right:18px;font-weight:600;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .where{font-size:.82rem;color:var(--muted);margin-top:4px}
 .tag{display:inline-flex;gap:6px;align-items:center;font-size:.82rem;color:var(--muted);white-space:nowrap;padding-top:4px}
@@ -5170,6 +5187,209 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["S.97","info","Autocomprobación del sensor de presión de agua",""],
       ["S.98","info","Autocomprobación de las sondas de ida y retorno",""],
       ["S.99","info","Autocomprobación de Vaillant",""]
+    ],
+    vaillant_plusvmi: [
+      ["F.000","sensor","Sonda de ida interrumpida","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.001","sensor","Sonda de retorno interrumpida","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.002","sensor","Sonda de salida de agua caliente interrumpida","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.003","sensor","Sonda del acumulador interrumpida","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.010","sensor","Cortocircuito en la sonda de ida","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.011","sensor","Cortocircuito en la sonda de retorno","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.012","sensor","Cortocircuito en la sonda de salida de agua caliente","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.013","sensor","Cortocircuito en la sonda del acumulador","Revisar el mazo y las conexiones rápidas entre la placa y la sonda; si están bien, cambiar la sonda."],
+      ["F.020","temp","El limitador de seguridad (STB) ha cortado la válvula de gas por exceso de temperatura","Comprobar si falta agua o hay fugas; revisar sondas de ida y retorno y su cableado, bomba, válvula de 3 vías, sensor de presión, sensor de caudal y la descarga negra del cable, enchufe, transformador y electrodo de encendido."],
+      ["F.022","agua","Falta de agua o presión demasiado baja","Rellenar y buscar fugas. Revisar conexión y cable del sensor de presión y de la bomba, el sensor, la unidad de llenado automático y el vaso de expansión interno."],
+      ["F.023","agua","Diferencia de temperatura entre ida y retorno excesiva","Purgar. Revisar sondas y su cableado, bomba (bloqueada o con poca potencia), válvula de 3 vías y vaso de expansión interno."],
+      ["F.024","agua","La temperatura sube demasiado rápido","Purgar y comprobar la presión de la instalación. Revisar sondas, bomba, válvula de 3 vías y vaso de expansión interno."],
+      ["F.025","humos","Temperatura de humos demasiado alta","Revisar el mazo de cables del limitador de humos (conector X20, contactos 14/15) y el propio limitador si lo lleva."],
+      ["F.027","llama","Se detecta llama con el quemador apagado","Revisar la estanquidad de la válvula magnética de gas; si no, cambiar la placa."],
+      ["F.028","llama","No hay llama durante el encendido","Comprobar daños por encendido duro (intercambiador, sifón, evacuación de humos, carcasa). Revisar llave de gas, presión de gas, aire en la tubería, tipo de gas (D.156 y D.157), desviación de la válvula (D.052 y D.182), aspiración de aire, electrodos, ionización, tierra, recorrido de humos y la descarga de condensados. Usar P.021; con gas líquido, P.022."],
+      ["F.029","llama","Se apaga la llama en funcionamiento","Revisar suministro de gas, recorrido de humos (recirculación o bloqueo), tierra, aspiración de aire, transformador y electrodos de encendido y control, quemador, válvula de gas y la descarga de condensados. Usar P.021."],
+      ["F.032","electronica","Velocidad del ventilador fuera de tolerancia","Revisar conexión del ventilador, que no esté bloqueado o averiado, el recorrido de humos y la placa."],
+      ["F.035","humos","Conducto de aire o de humos bloqueado","Revisar tubo de aspiración de aire, presión de gas, recorrido de humos (recirculación o bloqueo) y la descarga de condensados o su bomba."],
+      ["F.040","humos","Exceso de aire demasiado bajo","Revisar recorrido de humos, aspiración de aire, descarga de condensados o su bomba, tipo de gas ajustado y desviación de la válvula."],
+      ["F.042","electronica","Resistencia de codificación no válida","Revisar el mazo del ventilador, que el mazo entre placa y válvula de gas sea el correcto y la resistencia de codificación de la célula térmica (junto con F.070) o la del ventilador."],
+      ["F.044","llama","Señal de ionización demasiado baja: falló la adaptación de deriva","Revisar recorrido de humos, aspiración de aire, condensados, presión de gas, tipo de gas y el electrodo de control."],
+      ["F.047","sensor","Sonda de salida del acumulador interno: señal no creíble","Revisar la conexión eléctrica y la propia sonda."],
+      ["F.049","electronica","eBUS en cortocircuito o con polaridad invertida","Revisar el cableado del eBUS y la placa."],
+      ["F.057","llama","Falló la regulación de combustión y también el modo de emergencia","Revisar recorrido de humos, aspiración de aire, condensados, presión de gas, tipo de gas y electrodo de control."],
+      ["F.061","gas","El procesador de la placa no funciona dentro de los tiempos","Revisar la conexión eléctrica de la válvula de gas; si no, cambiar la placa."],
+      ["F.062","gas","La llama se apaga con retraso","Revisar válvula de gas, placa, electrodo de encendido y mazo de cables."],
+      ["F.063","electronica","Error de memoria EEPROM","Cambiar la placa."],
+      ["F.064","electronica","La señal de un sensor no se puede convertir","Revisar el sensor, el mazo de cables y la placa."],
+      ["F.065","electronica","Temperatura de un componente electrónico fuera de rango","Dejar enfriar y revisar la placa."],
+      ["F.067","electronica","Controlador de llama averiado: señal no aceptable","Cambiar la placa."],
+      ["F.068","electronica","Señal de llama inestable","Cambiar la placa."],
+      ["F.070","electronica","Identificación del aparato (DSN) incorrecta o ausente","Se produce al cambiar a la vez placa y pantalla sin ajustar bien el código. Revisar también la conexión de la válvula de gas."],
+      ["F.071","sensor","Sonda de ida con valores no creíbles","Revisar su posición y su estado."],
+      ["F.072","sensor","Diferencia entre las sondas de ida y retorno no válida","Revisar las dos sondas y su cableado."],
+      ["F.074","agua","Sensor de presión de agua interrumpido","Revisar su conexión y el propio sensor."],
+      ["F.075","agua","Salto de presión demasiado bajo al arrancar la bomba","Revisar sensor de presión, bomba, presión de la instalación, vaso de expansión interno, falta de agua o aire y los mazos de cables (también el cable Lin)."],
+      ["F.076","temp","Protección contra sobrecalentamiento del intercambiador primario activa","Revisar el mazo de cables."],
+      ["F.077","humos","Bomba de condensados o trampilla de humos bloquean el quemador","Revisar la respuesta de la trampilla, la conexión de la bomba de condensados y la propia bomba."],
+      ["F.078","electronica","Módulo de regulación no soportado por el aparato","Revisar el regulador conectado y la conexión de la sonda de salida."],
+      ["F.080","sensor","Sonda de entrada de agua fría del acumulador interno defectuosa o desconectada",""],
+      ["F.081","agua","Ha fallado la sobrealimentación",""],
+      ["F.083","sensor","Al arrancar el quemador no sube la temperatura (o sube demasiado despacio)","Revisar sondas de ida y retorno, circulación de agua y que haya agua suficiente."],
+      ["F.084","sensor","Diferencia entre ida y retorno con valores no creíbles","Revisar sondas (posible intercambio)."],
+      ["F.085","sensor","Sondas NTC mal montadas","Revisar su montaje y contacto térmico."],
+      ["F.087","electronica","Transformador de encendido sin conectar a la placa","Revisar el cable del transformador."],
+      ["F.088","gas","Cortada la conexión eléctrica con la válvula de gas","Revisar mazo y conectores de la válvula."],
+      ["F.089","agua","La bomba de calefacción integrada no es adecuada para el modelo","Revisar que la bomba sea la correcta."],
+      ["F.090","electronica","Comunicación con el acumulador interno interrumpida","Revisar el cableado del acumulador."],
+      ["F.092","gas","El cambio de tipo de gas no terminó correctamente","Repetir la conversión de gas."],
+      ["F.095","gas","El motor paso a paso de la válvula de gas llegó al mínimo de pasos","Revisar el ajuste de gas y el recorrido de humos."],
+      ["F.096","gas","El motor paso a paso de la válvula de gas llegó al máximo de pasos","Revisar el ajuste de gas y el recorrido de humos."],
+      ["F.097","electronica","Falló la autocomprobación de la placa principal","Cambiar la placa."],
+      ["F.105","electronica","Al cambiar a la vez válvula de gas o placa y pantalla hay que ajustar la desviación de la válvula","Poner la desviación de la válvula actual (D.052 y D.182)."],
+      ["F.110","llama","No se detectó un encendido correcto con mezcla enriquecida","Revisar encendido y gas."],
+      ["F.194","electronica","Fuente de alimentación de la placa averiada","Cambiar la placa."],
+      ["F.195","electronica","Subtensión importante en el suministro eléctrico","Revisar la tensión de red."],
+      ["F.196","electronica","Sobretensión importante en el suministro eléctrico","Revisar la tensión de red."],
+      ["F.228","llama","En modo de emergencia no se pudo encender","Revisar como en F.028."],
+      ["F.229","llama","En modo de emergencia falló la llama","Revisar como en F.029."],
+      ["F.281","llama","La llama falló durante el tiempo de estabilización","Revisar como en F.029."],
+      ["F.291","llama","Pérdida de llama durante la estabilización en funcionamiento","Revisar como en F.029."],
+      ["F.317","sensor","Señal del sensor de caudal de agua caliente no creíble","Revisar el sensor de caudal y su cable."],
+      ["F.318","agua","La válvula motorizada de 3 vías no se mueve","Revisar la válvula, su motor y el cableado."],
+      ["F.320","agua","Bomba de calefacción bloqueada: falló el desbloqueo automático","Desbloquear o cambiar la bomba."],
+      ["F.321","electronica","Electrónica de la bomba averiada","Cambiar la bomba."],
+      ["F.322","temp","Bomba de calefacción sobrecalentada","El modo de emergencia no logró bajarle la temperatura."],
+      ["F.323","agua","Bomba de calefacción funcionando en seco","Purgar y comprobar el llenado."],
+      ["F.324","electronica","Cortada la conexión eléctrica de las bombas","Revisar cableado de bombas."],
+      ["F.325","agua","Error en la bomba de calefacción",""],
+      ["F.326","agua","La prueba hidráulica detectó al menos dos componentes hidráulicos que no funcionan",""],
+      ["F.327","agua","Circuito de agua caliente sin conectar: el caudal mínimo de calefacción queda limitado",""],
+      ["F.330","agua","La bomba no responde a las órdenes durante la comprobación hidráulica",""],
+      ["F.334","humos","No se completó la configuración de la evacuación de humos","Terminar la configuración en el asistente."],
+      ["F.336","electronica","Aparato no permitido en esta configuración",""],
+      ["F.337","humos","El kit de conversión de evacuación múltiple no corresponde a la célula térmica",""],
+      ["F.338","humos","Asignación de ocupación múltiple incorrecta",""],
+      ["F.342","sensor","Sensor de caudal de aire fuera de límites",""],
+      ["F.343","sensor","Señal del sensor de caudal másico de aire no creíble",""],
+      ["F.344","llama","El electrodo de control ya no se puede seguir utilizando","Cambiarlo y reiniciar la desviación en D.146 y D.147."],
+      ["F.347","humos","Condensado en la cámara de combustión: se interrumpe el quemador","Limpiar la descarga de condensados y el sifón."],
+      ["F.363","electronica","Error de memoria EEPROM de la pantalla","Cambiar la pantalla."],
+      ["F.707","electronica","Sin comunicación entre pantalla y placa","Revisar el cable entre pantalla y placa."],
+      ["F.905","electronica","Interfaz de comunicación desconectada","Revisar la conexión."],
+      ["I.003","info","Aviso: toca el mantenimiento","Hacer el mantenimiento y reiniciar el intervalo."],
+      ["I.020","info","Aviso: presión de agua en el límite inferior","Rellenar la instalación."],
+      ["I.144","info","Aviso: el electrodo de control está muy envejecido","Cambiarlo y reiniciar la desviación en D.146 y D.147."]
+    ],
+    vaillant_plusvmi_prog: [
+      ["P.xxx","info","Cómo activar los programas de test (ecoTEC plus VM, VMW y VMI)","Menú → Ajustes → Nivel profesional autorizado y poner el código 17. Después Modos de prueba → Programas de comprobación, elegir el programa con la barra de desplazamiento y confirmar. En P.001 primero se pide la carga. Con un código L.xxx activo algunos programas quedan bloqueados."],
+      ["P.000","info","Purga: la bomba funciona por ciclos y se purgan calefacción y agua caliente","Aflojar la tapa del purgador rápido. Una pulsación inicia la purga de calefacción y otra la termina. Una cuenta atrás indica la duración y el programa acaba solo."],
+      ["P.001","info","Carga ajustable: tras el encendido la caldera funciona con la carga que se elija",""],
+      ["P.003","info","Carga máxima de calefacción: funciona con la carga parcial de calefacción ajustada en D.000",""],
+      ["P.008","info","Llenado: válvula de prioridad en el centro, quemador y bomba parados","Para llenar y vaciar el aparato."],
+      ["P.021","info","Ayuda al diagnóstico del encendido","Comprueba si el encendido se puede hacer, sin vigilar la llama con el electrodo de control. Si va bien, queda un símbolo fijo en la pantalla."],
+      ["P.022","info","Encendido enriquecido","Se usa con F.028 solo en gas líquido."],
+      ["T.xxx","info","Pruebas de actuadores","Menú → Modos de prueba → Prueba del actuador (con el código 17). Con L.xxx activo algunas quedan bloqueadas."],
+      ["T.001","info","Bomba interna: se conecta y regula con la presión diferencial elegida",""],
+      ["T.002","info","Válvula de 3 vías: se pone en calefacción o en agua caliente",""],
+      ["T.003","info","Ventilador: se conecta y desconecta, funciona a velocidad máxima",""],
+      ["T.004","info","Bomba de carga del acumulador: se conecta y desconecta",""],
+      ["T.005","info","Bomba de recirculación: se conecta y desconecta",""],
+      ["T.006","info","Bomba externa: se conecta y desconecta",""],
+      ["T.007","info","Modulación mínima: el aparato se enciende a carga mínima y muestra la temperatura de ida",""],
+      ["D.xxx","info","Menú de diagnóstico","Nivel profesional (código 17) → Códigos de diagnóstico. Elegir con la barra, confirmar, cambiar el valor y confirmar. Algunos códigos no aparecen según el modelo."],
+      ["D.000","info","Carga parcial de calefacción en kW",""],
+      ["D.001","info","Tiempo de marcha en inercia de la bomba","De 1 a 60 min. De fábrica 5."],
+      ["D.002","info","Tiempo máximo de bloqueo del quemador","De 2 a 60 min. De fábrica 20."],
+      ["D.020","info","Temperatura máxima del agua caliente","De 50 a 70 °C. De fábrica 70."],
+      ["D.026","info","Función del relé adicional (bomba de recirculación, de carga, electroválvula externa…)","Sirve para poner en marcha el componente conectado."],
+      ["D.029","info","Caudal real medido (l/h)",""],
+      ["D.033","info","Velocidad nominal del ventilador (rpm)",""],
+      ["D.034","info","Velocidad real del ventilador (rpm)",""],
+      ["D.035","info","Posición de la válvula de 3 vías","0 = calefacción; 100 = agua caliente."],
+      ["D.036","info","Caudal de agua caliente (l/min)",""],
+      ["D.040","info","Temperatura real de ida",""],
+      ["D.041","info","Temperatura real de retorno",""],
+      ["D.047","info","Temperatura exterior (con sonda exterior)",""],
+      ["D.052","info","Desviación de la válvula de gas","Hay que ponerla al cambiar la válvula, la placa o la pantalla."],
+      ["D.058","info","Poscalentamiento solar","3 = agua caliente a 60 °C como mínimo; de fábrica 5."],
+      ["D.060","info","Número de desconexiones del limitador de temperatura",""],
+      ["D.061","info","Número de encendidos fallidos",""],
+      ["D.064","info","Tiempo medio de encendido (s)",""],
+      ["D.065","info","Tiempo máximo de encendido (s)",""],
+      ["D.067","info","Tiempo de bloqueo del quemador que queda (min)",""],
+      ["D.070","info","Modo de la válvula de 3 vías","0 = automático."],
+      ["D.071","info","Temperatura máxima de ida de calefacción","De 40 a 80 °C. De fábrica 75."],
+      ["D.072","info","Tiempo de marcha en inercia de la bomba tras la carga del acumulador","De 0 a 10 min. De fábrica 2."],
+      ["D.074","info","Protección antilegionela del acumulador (off/on)","De fábrica conectada."],
+      ["D.075","info","Tiempo máximo de carga del acumulador","De 20 a 90 min. De fábrica 45."],
+      ["D.080","info","Horas de funcionamiento en calefacción",""],
+      ["D.081","info","Horas de funcionamiento en agua caliente",""],
+      ["D.082","info","Arranques del quemador en calefacción",""],
+      ["D.083","info","Arranques del quemador en agua caliente",""],
+      ["D.084","info","Horas hasta el próximo mantenimiento","De 0 a 7000 h; «---» lo desactiva. De fábrica 5000."],
+      ["D.093","info","Código del aparato (DSN)","Hay que ponerlo si se cambian a la vez placa y pantalla."],
+      ["D.094","info","Borrar la lista de fallos",""],
+      ["D.095","info","Versiones de software",""],
+      ["D.096","info","Volver a los ajustes de fábrica","Cuidado: borra los ajustes hechos."],
+      ["D.146","info","Reiniciar la desviación del electrodo de control","Se usa al cambiar el electrodo."],
+      ["D.156","info","Autorización de la conversión de gas",""],
+      ["D.157","info","Tipo de gas ajustado",""],
+      ["D.160","info","Presión de llenado mínima","De 1,0 a 2,0 bar. De fábrica 1,5."],
+      ["D.170","info","Modo de funcionamiento hidráulico de la bomba","0 a 4: sin bypass, con conducto de derivación, dispersión ΔT o nivel fijo."],
+      ["D.182","info","Desviación de la válvula de gas (segunda parte)",""]
+    ],
+    vaillant_plusvmi_estado: [
+      ["S.xxx","info","Cómo ver los códigos de estado","Menú → Información → Código de estado."],
+      ["S.000","info","Calefacción: sin demanda",""],
+      ["S.001","info","Calefacción: arranca el ventilador",""],
+      ["S.002","info","Calefacción: la bomba arranca",""],
+      ["S.003","info","Calefacción: encendido",""],
+      ["S.004","info","Calefacción: quemador encendido","Estado normal en calefacción."],
+      ["S.005","info","Calefacción: bomba y ventilador en inercia",""],
+      ["S.006","info","Calefacción: ventilador en inercia",""],
+      ["S.007","info","Calefacción: bomba en inercia",""],
+      ["S.008","info","Calefacción: tiempo de bloqueo del quemador",""],
+      ["S.009","info","Calefacción: adaptación automática de deriva del electrodo","Compensa el envejecimiento del electrodo."],
+      ["S.010","info","Agua caliente: sin demanda",""],
+      ["S.011","info","Agua caliente: arranca el ventilador",""],
+      ["S.012","info","Agua caliente: la bomba arranca",""],
+      ["S.013","info","Agua caliente: encendido",""],
+      ["S.014","info","Agua caliente: quemador encendido","Estado normal con agua caliente."],
+      ["S.015","info","Agua caliente: bomba y ventilador en inercia",""],
+      ["S.016","info","Agua caliente: ventilador en inercia",""],
+      ["S.017","info","Agua caliente: bomba en inercia",""],
+      ["S.019","info","Agua caliente: adaptación automática de deriva del electrodo",""],
+      ["S.020","info","Carga del acumulador: sin demanda",""],
+      ["S.021","info","Carga del acumulador: arranca el ventilador",""],
+      ["S.022","info","Carga del acumulador: la bomba arranca",""],
+      ["S.023","info","Carga del acumulador: encendido",""],
+      ["S.024","info","Carga del acumulador: quemador encendido",""],
+      ["S.025","info","Carga del acumulador: bomba y ventilador en inercia",""],
+      ["S.026","info","Carga del acumulador: ventilador en inercia",""],
+      ["S.027","info","Carga del acumulador: bomba en inercia",""],
+      ["S.028","info","Carga del acumulador: tiempo de bloqueo del quemador",""],
+      ["S.029","info","Carga del acumulador: adaptación automática de deriva del electrodo",""],
+      ["S.030","info","Calefacción bloqueada: el termostato no pide calor",""],
+      ["S.031","info","Calefacción desactivada y sin demanda de agua caliente",""],
+      ["S.032","info","El ventilador se reinicia por desviación de velocidad excesiva",""],
+      ["S.034","info","Protección antihielo activa",""],
+      ["S.039","info","Termostato de contacto del suelo o bomba de condensados bloquean el quemador","El aparato queda en espera."],
+      ["S.041","info","Presión de agua demasiado alta",""],
+      ["S.042","info","Unidad externa (bomba de condensados o trampilla de humos) bloquea el quemador","El aparato queda en espera."],
+      ["S.054","info","En espera por falta de agua",""],
+      ["S.057","info","El modo de emergencia de la regulación de combustión bloquea el quemador",""],
+      ["S.059","info","Hay demanda pero el caudal de recirculación no basta para arrancar",""],
+      ["S.088","info","Programa de purga activo",""],
+      ["S.091","info","Modo demostración con funcionamiento limitado",""],
+      ["S.092","info","Autocomprobación del caudal de recirculación",""],
+      ["S.093","info","Ahora no es posible hacer el análisis de combustión","En modo deshollinador indica que se está calibrando."],
+      ["S.096","info","Autocomprobación de la sonda de retorno","Las demandas de calor quedan bloqueadas."],
+      ["S.097","info","Autocomprobación del sensor de presión de agua","Las demandas de calor quedan bloqueadas."],
+      ["S.098","info","Autocomprobación de las sondas de ida y retorno","Las demandas de calor quedan bloqueadas."],
+      ["S.109","info","Modo en espera (standby)",""],
+      ["S.175","info","Asistente de instalación en marcha: demandas bloqueadas",""],
+      ["S.199","info","El aparato se está llenando de agua automáticamente",""],
+      ["S.326","info","Prueba hidráulica de sensor y actuador activa",""],
+      ["S.328","info","La bomba funciona de forma permanente sin estar conectada al aparato",""],
+      ["S.335","info","Se comprueba si hay un bloqueo en la evacuación",""],
+      ["S.341","info","Se reduce temporalmente la carga a la modulación mínima por funcionamiento prolongado",""],
+      ["S.599","info","El aparato tiene un error",""]
     ]
   };
 
@@ -5220,14 +5440,17 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     ],src:[["Termix: códigos Bosch y Junkers","https://www.termix.ro/en/info/coduri-eroare-centrale-termice-bosch-junkers"],["codigocalderas.com: Bosch","https://codigocalderas.com/bosch/"]]},
     {id:"vaillant",name:"Vaillant",blurb:"Códigos F.xx y F0 a F77.",models:[
       {id:"vaillant-ecotec",name:"ecoTEC",set:"vaillant",desc:"Condensación. Mantener pulsado el reset 1 – 3 s para rearmar.",note:"La tabla es común a varias gamas y algunos códigos pueden no aparecer en tu modelo.",ficha:"https://codigocalderas.com/vaillant-ecotec-pro/"},
-      {id:"vaillant-ecotec-plus-vm",name:"ecoTEC PLUS VM",set:"vaillant",desc:"Condensación."},
-      {id:"vaillant-ecotec-plus-vmw",name:"ecoTEC Plus VMW",set:"vaillant",desc:"Condensación."},
+      {id:"vaillant-ecotec-plus-vm",name:"ecoTEC plus VM (25, 30 y 35CS/1-5)",set:"vaillant_plusvmi",desc:"Condensación."},
+      {id:"vaillant-ecotec-plus-vmw",name:"ecoTEC plus VMW (23, 26, 32 y 36CS/1-5)",set:"vaillant_plusvmi",desc:"Condensación."},
+      {id:"vaillant-plusvmi",name:"ecoTEC plus VMI (32CS/1-5 y 36CS/1-5)",set:"vaillant_plusvmi",desc:"Condensación con acumulador. Potencias altas."},
+      {id:"vaillant-plusvmi-prog",hide:true,name:"ecoTEC plus: programas de test y diagnóstico",set:"vaillant_plusvmi_prog",desc:"Cómo activarlos y qué hace cada uno."},
+      {id:"vaillant-plusvmi-estado",hide:true,name:"ecoTEC plus: códigos de estado S.xxx",set:"vaillant_plusvmi_estado",desc:"Qué está haciendo la caldera."},
       {id:"vaillant-ecotec-pro",name:"ecoTEC Pro (VMW 236/5-3 y 286/5-3)",set:"vaillant_pro",desc:"Condensación."},
-      {id:"vaillant-pro-prog",name:"ecoTEC Pro: programas de test y diagnóstico",set:"vaillant_pro_prog",desc:"Cómo activarlos y qué hace cada uno."},
-      {id:"vaillant-pro-estado",name:"ecoTEC Pro: códigos de estado S.xx",set:"vaillant_pro_estado",desc:"Qué está haciendo la caldera."},
+      {id:"vaillant-pro-prog",hide:true,name:"ecoTEC Pro: programas de test y diagnóstico",set:"vaillant_pro_prog",desc:"Cómo activarlos y qué hace cada uno."},
+      {id:"vaillant-pro-estado",hide:true,name:"ecoTEC Pro: códigos de estado S.xx",set:"vaillant_pro_estado",desc:"Qué está haciendo la caldera."},
       {id:"vaillant-ecotec-pure",name:"ecoTEC pure (VMW 236/7-2 y 286/7-2)",set:"vaillant_pure",desc:"Condensación.",ficha:"https://codigocalderas.com/vaillant/ecotec-pure/"},
-      {id:"vaillant-pure-prog",name:"ecoTEC pure: programas de test y diagnóstico",set:"vaillant_pure_prog",desc:"Cómo activarlos y qué hace cada uno."},
-      {id:"vaillant-pure-estado",name:"ecoTEC pure: códigos de estado S.xx",set:"vaillant_pure_estado",desc:"Qué está haciendo la caldera."},
+      {id:"vaillant-pure-prog",hide:true,name:"ecoTEC pure: programas de test y diagnóstico",set:"vaillant_pure_prog",desc:"Cómo activarlos y qué hace cada uno."},
+      {id:"vaillant-pure-estado",hide:true,name:"ecoTEC pure: códigos de estado S.xx",set:"vaillant_pure_estado",desc:"Qué está haciendo la caldera."},
       {id:"vaillant-ecofit",name:"ecoFIT Pure",set:"vaillant",desc:"Condensación.",note:"La tabla es común a varias gamas y algunos códigos pueden no aparecer en tu modelo."},
       {id:"vaillant-atmotec",name:"atmoTEC / turboTEC",set:"vaillant",desc:"Modelos anteriores. En algunos solo se ve una secuencia de parpadeos.",note:"La tabla es común a varias gamas y algunos códigos pueden no aparecer en tu modelo.",ficha:"https://codigocalderas.com/vaillant-atmotec/"},
       {id:"vaillant-turbotec-plus-pro",name:"turboTEC Plus / Pro",set:"vaillant_turbotec",desc:"Estanca. Los códigos se muestran como F0, F1, F10…",note:"La página de referencia no lista modelos concretos.",ficha:"https://codigocalderas.com/vaillant-turbotec-plus-pro/"},
@@ -5241,8 +5464,8 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"vaillant-turbomax-pro",name:"turboMAX Pro (VMW 242/5)",set:"vaillant_turbomax_plus",desc:"Estanca."},
       {id:"vaillant-aquablock",name:"aquaBLOCK (VMI 280, 282/7 y 32, 362/7)",set:"vaillant_aquablock",desc:"Solo calefacción con acumulador."},
       {id:"vaillant-atmocombi",name:"atmoCOMBI VMW 230/1 y turboCOMBI VMW 232/1",set:"vaillant_combi",desc:"Mural antiguo."},
-      {id:"vaillant-estado",name:"Códigos de estado S.xx",set:"vaillant_estado",desc:"No son averías: indican lo que está haciendo la caldera.",note:"Se ven pulsando el botón «i» bajo la pantalla. Si hay varios estados a la vez, se muestra el más importante."},
-      {id:"vaillant-programas",name:"Programas de test y diagnóstico",set:"vaillant_prog",desc:"Cómo entrar y qué hace cada programa."},
+      {id:"vaillant-estado",hide:true,name:"Códigos de estado S.xx",set:"vaillant_estado",desc:"No son averías: indican lo que está haciendo la caldera.",note:"Se ven pulsando el botón «i» bajo la pantalla. Si hay varios estados a la vez, se muestra el más importante."},
+      {id:"vaillant-programas",hide:true,name:"Programas de test y diagnóstico",set:"vaillant_prog",desc:"Cómo entrar y qué hace cada programa."},
       {id:"vaillant-turbomax-plus",name:"turboMAX Plus",set:"vaillant_turbomax_plus",desc:"Estanca (turboMAX) y atmosférica (atmoMAX).",note:"Las tres comparten la misma tabla.",ficha:"https://codigocalderas.com/vaillant-turbomax-plus/"}
     ],src:[["Termix: códigos Vaillant","https://www.termix.ro/en/info/coduri-de-avarie-centrale-termice-vaillant"],["Manual ecoTEC pro (códigos de error)","https://manualslib.com/manual/1529976/Vaillant-Ecotec-Pro-24.html?page=36"],["codigocalderas.com: Vaillant","https://codigocalderas.com/vaillant/"]]},
     {id:"saunier",name:"Saunier Duval",blurb:"Códigos F.xx, F.000 y numéricos.",models:[
@@ -5277,8 +5500,8 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"saunier-isotwin-condens",name:"Isotwin Condens",set:"saunier_isotwin_condens",desc:"Condensación. Los códigos son números sin la F.",ficha:"https://codigocalderas.com/saunier-duval-isotwin-condens/"},
       {id:"saunier-isofast-miconnect",name:"IsoFast MiConnect",set:"saunier_miconnect",desc:"Condensación. Los códigos tienen formato F.000.",note:"La página de referencia da una sola tabla para toda la gama y no indica qué código corresponde a cada modelo.",ficha:"https://codigocalderas.com/saunier-duval/isofast-miconnect/"},
       {id:"saunier-isofast-miconnect-h",name:"IsoFast MiConnect H-Condens",set:"saunier_miconnect",desc:"Condensación."},
-      {id:"saunier-estado",name:"Códigos de estado S.xx",set:"saun_estado",desc:"No son averías: indican lo que hace la caldera."},
-      {id:"saunier-programas",name:"Programas de test y diagnóstico",set:"saun_prog",desc:"Cómo entrar y qué hace cada programa."}
+      {id:"saunier-estado",hide:true,name:"Códigos de estado S.xx",set:"saun_estado",desc:"No son averías: indican lo que hace la caldera."},
+      {id:"saunier-programas",hide:true,name:"Programas de test y diagnóstico",set:"saun_prog",desc:"Cómo entrar y qué hace cada programa."}
     ],src:[["Habitatpresto: códigos Saunier Duval","https://www.habitatpresto.com/mag/chauffage/code-erreur-chaudiere-saunier-duval"],["codigocalderas.com: Saunier Duval","https://codigocalderas.com/saunier-duval/calderas/"]]},
     {id:"baxi",name:"Baxi · Roca",blurb:"Misma empresa y mismas calderas: Roca es la marca hermana de Baxi.",brandNote:"Baxi y Roca pertenecen al mismo grupo (BaxiRoca) y comparten muchas calderas con otro nombre, por eso van juntas y sin repetir. Si tu caldera pone Roca, búscala aquí.",models:[
       {id:"baxi-eco-compact",name:"Eco Compact",set:"baxi_eco",desc:"Mural a gas. Si aparece «R» en el display, el usuario puede rearmar manteniendo pulsado el botón central.",note:"Lista del manual del usuario Eco Compact. Otras gamas Baxi usan tablas distintas."},
@@ -5317,11 +5540,11 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"roca-victoria-plus",name:"Victoria Plus 24/24, 24/24 F y 24/24 TC",set:"roca_victoria_plus",desc:"Mural a gas."},
       {id:"roca-novamax",name:"Novamax 25/25 F, 31/31 F y 31 AF",set:"roca_novamax",desc:"Mural a gas."},
       {id:"roca-nora",name:"Nora (24, 24 A, 24 F, 24 AF, 24/24, 24/24 T y 24/24 F)",set:"roca_destellos",desc:"Los fallos se indican con combinaciones de números que terminan en 90.",note:"La página de referencia da una sola tabla para toda la gama.",ficha:"https://codigocalderas.com/roca-nora/"},
-      {id:"roca-funciones",name:"Instalador: Novanox",set:"roca_func",desc:"Información, parámetros y rearme."},
-      {id:"baxi-func-neodens",name:"Instalador: Neodens Plus y Platinum Compact",set:"roca_neodens_func",desc:"Deshollinador, CO₂, purga, calibrado y parámetros."},
+      {id:"roca-funciones",hide:true,name:"Instalador: Novanox",set:"roca_func",desc:"Información, parámetros y rearme."},
+      {id:"baxi-func-neodens",hide:true,name:"Instalador: Neodens Plus y Platinum Compact",set:"roca_neodens_func",desc:"Deshollinador, CO₂, purga, calibrado y parámetros."},
       {id:"baxi-func-iplus",name:"Instalador: Bios iPlus 90 a 150 F",set:"baxi_iplus_func",desc:"Modo chimenea, purga y parámetros."},
-      {id:"roca-func-laura",name:"Instalador: Laura 20/20",set:"roca_laura_func",desc:"Máxima potencia, gas y programación."},
-      {id:"roca-func-r20",name:"Instalador: R-20 y RS-20",set:"roca_r20_func",desc:"Ajustes manuales de potencia y encendido."}
+      {id:"roca-func-laura",hide:true,name:"Instalador: Laura 20/20",set:"roca_laura_func",desc:"Máxima potencia, gas y programación."},
+      {id:"roca-func-r20",hide:true,name:"Instalador: R-20 y RS-20",set:"roca_r20_func",desc:"Ajustes manuales de potencia y encendido."}
     ],src:[["Manual Baxi Eco Compact, tabla de averías","https://www.manualslib.mx/manual/192276/Baxi-Eco-Compact.html?page=29"],["codigocalderas.com: Baxi y Roca","https://codigocalderas.com/baxi/calderas/"],["Suner: error E01 en Roca Novanox","https://blog.suner.eu/en/how-to-fix-error-e01-on-roca-novanox-24-24f-boiler/"],["Suner: error E10 en Roca","https://blog.suner.eu/page/2/"]]},
 
     {id:"cointra",name:"Cointra",blurb:"Códigos A.xx, F.xx y numéricos. Varios con luces.",models:[
@@ -5539,7 +5762,13 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     ferroli:["#7c2d12","#ea580c","800","uppercase",".06em"], beretta:["#3730a3","#6366f1","700","none","0"]
   };
   var SITES = {junkers:"bosch-homecomfort.com/es",bosch:"bosch-homecomfort.com/es",vaillant:"vaillant.es",saunier:"saunierduval.es",baxi:"baxi.es",cointra:"cointra.es",fagor:"fagor.es"};
+  var EX = {"vaillant-ecotec-pure": [["Códigos de estado", "vaillant-pure-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-pure-prog", "Cómo entrar y qué hace cada programa"]], "vaillant-ecotec-pro": [["Códigos de estado", "vaillant-pro-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-pro-prog", "Cómo entrar y qué hace cada programa"]], "vaillant-ecotec-plus-vm": [["Códigos de estado", "vaillant-plusvmi-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-plusvmi-prog", "Cómo entrar y qué hace cada programa"]], "vaillant-ecotec-plus-vmw": [["Códigos de estado", "vaillant-plusvmi-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-plusvmi-prog", "Cómo entrar y qué hace cada programa"]], "vaillant-plusvmi": [["Códigos de estado", "vaillant-plusvmi-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-plusvmi-prog", "Cómo entrar y qué hace cada programa"]], "vaillant-ecotec": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-programas", "Cómo entrar y qué hace cada programa"]], "vaillant-ecofit": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmotec": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-turbotec-plus-pro": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmopro": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmotec-pro": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-ecotec-exclusive-smart": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "vaillant-programas", "Cómo entrar y qué hace cada programa"]], "vaillant-turbotec-exclusiv": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmomax-pro": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmotec-classic": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmomax-plus": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-turbomax-pro": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-aquablock": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-atmocombi": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "vaillant-turbomax-plus": [["Códigos de estado", "vaillant-estado", "Qué está haciendo la caldera (S.xx)"]], "saunier-thema-nox": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thema-c": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thema": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-semia-tek": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isomax": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isofast": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isoplit-c": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isoplit-f30ehmod": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isofast-condens-35": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isofast-condens-f25": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isomax-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isomax-miconnect": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isotwin-miconnect": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thema-miconnect": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-themafast-miconnect": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isoplit-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isotwin-condens-f25": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thelia-semia": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thema-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-themafast-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-duomax": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-thema-classic": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-themaplus": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-themafast": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-themaplus-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isotwin": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isotwin-condens": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isofast-miconnect": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "saunier-isofast-miconnect-h": [["Códigos de estado", "saunier-estado", "Qué está haciendo la caldera (S.xx)"], ["Programas de test y diagnóstico", "saunier-programas", "Cómo entrar y qué hace cada programa"]], "baxi-neodens-plus": [["Funciones de instalador (calibrado, deshollinador, parámetros)", "baxi-func-neodens", "Cómo activarlas"]], "baxi-platinum-compact": [["Funciones de instalador (calibrado, deshollinador, parámetros)", "baxi-func-neodens", "Cómo activarlas"]], "roca-novanox": [["Funciones de instalador", "roca-funciones", "Información, parámetros y rearme"]], "roca-laura": [["Funciones de instalador", "roca-func-laura", "Máxima potencia, gas y programación"]], "roca-laura-plus": [["Funciones de instalador", "roca-func-laura", "Máxima potencia, gas y programación"]], "roca-r20": [["Funciones de instalador", "roca-func-r20", "Ajustes manuales de potencia y encendido"]], "roca-rs": [["Funciones de instalador", "roca-func-r20", "Ajustes manuales de potencia y encendido"]]};
+  var PARENT = {};
+  Object.keys(EX).forEach(function(k){EX[k].forEach(function(x){ if(!PARENT[x[1]]) PARENT[x[1]]=k; });});
   var MANUALS = {
+    "vaillant-ecotec-plus-vm":[["Manual de instalación y mantenimiento","manuales/vaillant-ecotec-plus-vm-instalacion.pdf"],["Manual de usuario","manuales/vaillant-ecotec-plus-vm-usuario.pdf"]],
+    "vaillant-ecotec-plus-vmw":[["Manual de instalación y mantenimiento","manuales/vaillant-ecotec-plus-vm-instalacion.pdf"],["Manual de usuario","manuales/vaillant-ecotec-plus-vm-usuario.pdf"]],
+    "vaillant-plusvmi":[["Manual de instalación y mantenimiento","manuales/vaillant-ecotec-plus-vmi-instalacion.pdf"],["Manual de usuario","manuales/vaillant-ecotec-plus-vmi-usuario.pdf"]],
     "vaillant-ecotec-pro":[["Manual de instalación y mantenimiento","manuales/vaillant-ecotec-pro-instalacion.pdf"],["Manual de usuario","manuales/vaillant-ecotec-pro-usuario.pdf"]],
     "vaillant-ecotec-pure":[["Manual de instalación y mantenimiento","manuales/vaillant-ecotec-pure-instalacion.pdf"],["Manual de usuario","manuales/vaillant-ecotec-pure-usuario.pdf"]]
   };
@@ -5637,6 +5866,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     var bt=BSTYLE[b.id]||["#1e293b","#475569"];
     var html = '<div class="mgrid">';
     sortedModels(b).forEach(function(m){
+      if(m.hide) return;
       var parts=m.name.match(/^(.*?)\s*\((.*)\)\s*(.*)$/), ttl=parts?(parts[1]||m.name):m.name, det=parts?(parts[2]+(parts[3]?' '+parts[3]:'')):'';
       if(PHOTOS[m.id]){ html += '<a class="mt ph" href="#'+m.id+'" style="--t1:'+bt[0]+';--t2:'+bt[1]+'" aria-label="'+esc(m.name)+', '+SETS[m.set].length+' códigos"><span class="pi"><img src="'+PHOTOS[m.id]+'" alt=""></span><span class="mn">'+esc(ttl)+'</span><span class="mm">'+SETS[m.set].length+' códigos</span></a>'; return; }
       html += '<a class="mt" href="#'+m.id+'" style="--t1:'+bt[0]+';--t2:'+bt[1]+'" aria-label="'+esc(m.name)+', '+SETS[m.set].length+' códigos"><span class="mn'+(ttl.length>26?' sm':'')+'">'+esc(ttl)+'</span>'+(det?'<span class="md">'+esc(det)+'</span>':'')+'<span class="mm">'+SETS[m.set].length+' códigos</span></a>';
@@ -5645,16 +5875,39 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     foot.textContent = "";
   }
 
+  var ICO_PDF='<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M6 2h8l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V8h4.5L13 3.5zM7.2 17.6h1.1v-1.6h.9c1.2 0 1.9-.7 1.9-1.6 0-1-.7-1.6-1.9-1.6H7.2v4.8zm1.1-2.5v-1.4h.8c.6 0 .9.3.9.7s-.3.7-.9.7h-.8zm3.7 2.5h1.4c1.5 0 2.4-.9 2.4-2.4s-.9-2.4-2.4-2.4H12v4.8zm1.1-.9v-3h.3c.9 0 1.3.5 1.3 1.5s-.4 1.5-1.3 1.5h-.3zm4-3.9v4.8h1.1v-1.9h1.2v-.9h-1.2v-1h1.4v-1h-2.5z"/></svg>';
+  var ICO_EST='<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M3 5h18v10H3V5zm2 2v6h14V7H5zm3 10h8v2H8v-2z"/></svg>';
+  var ICO_PRG='<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9a6.6 6.6 0 0 0-6.4-1.6l3.8 3.8-2.7 2.7-3.8-3.8A6.6 6.6 0 0 0 4.6 12.5c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l.7-.7c.5-.4.5-1.1 0-1.4z"/></svg>';
+  var ICO_GO='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9.3 5.3 8 6.7 13.3 12 8 17.3l1.3 1.4L16 12z"/></svg>';
+  var ICO_EXT='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M14 3v2h3.6l-9.8 9.8 1.4 1.4L19 6.4V10h2V3h-7zM5 5h6v2H5v12h12v-6h2v8H3V5h2z"/></svg>';
+  function xbtn(href,ico,t,sub,cls,ext){
+    return '<a class="xb '+cls+'" href="'+href+'"'+(ext?' target="_blank" rel="noopener"':'')+'><span class="xi">'+ico+'</span><span class="xt"><b>'+esc(t)+'</b>'+(sub?'<small>'+esc(sub)+'</small>':'')+'</span><span class="xg">'+(ext?ICO_EXT:ICO_GO)+'</span></a>';
+  }
+  var NOLINKS = /^(saun_estado|saun_prog|vaillant_prog|vaillant_estado|vaillant_pure_prog|vaillant_pure_estado|vaillant_pro_prog|vaillant_pro_estado|vaillant_plusvmi_prog|vaillant_plusvmi_estado|roca_func|roca_neodens_func|baxi_iplus_func|roca_laura_func|roca_r20_func)$/;
   function modelView(b,m){
-    var codes = SETS[m.set], counts = {};
-    codes.forEach(function(c){counts[c[1]]=(counts[c[1]]||0)+1;});
+    var codes = SETS[m.set], bt = BSTYLE[b.id]||["#1e293b","#475569"];
     filter = "todas";
-    var html = ''+
-      '<div class="head" style="margin-top:14px"><h2>'+esc(b.name)+' '+esc(m.name)+'</h2>'+(/^(saun_estado|saun_prog|vaillant_prog|vaillant_estado|vaillant_pure_prog|vaillant_pure_estado|vaillant_pro_prog|vaillant_pro_estado|roca_func|roca_neodens_func|baxi_iplus_func|roca_laura_func|roca_r20_func)$/.test(m.set)?'':''+(MANUALS[m.id]&&/github\.io$|^localhost$/.test(location.hostname)?MANUALS[m.id].map(function(x){return '<a class="ficha" href="'+x[1]+'" target="_blank" rel="noopener">📄 '+esc(x[0])+' (PDF)</a> ';}).join(''):'<a class="ficha" href="'+manualUrl(b,m)+'" target="_blank" rel="noopener">Buscar el manual oficial ↗</a>')+' <a class="ficha" href="'+fotosUrl(b,m)+'" target="_blank" rel="noopener">Ver fotos del modelo ↗</a>')+
+    var par = PARENT[m.id] && find(PARENT[m.id]);
+    var html = '<div class="head" style="margin-top:14px">';
+    if(m.hide && par && par.model){ html += '<a class="back" href="#'+par.model.id+'">← '+esc(par.model.name)+'</a>'; }
+    html += '<h2>'+esc(b.name)+' '+esc(m.name)+'</h2>'+
       (m.note && /contrasta|confirm|ambig/i.test(m.note)?'<p class="note">'+esc(m.note)+'</p>':'')+'</div>';
+    if(!m.hide && !NOLINKS.test(m.set)){
+      var pdf = MANUALS[m.id]&&/github\.io$|^localhost$/.test(location.hostname);
+      html += '<div class="xbs" style="margin-top:12px">';
+      if(pdf){ MANUALS[m.id].forEach(function(x){ html += xbtn(x[1],ICO_PDF,x[0],'Manual en PDF','xb-pdf',true); }); }
+      else { html += xbtn(manualUrl(b,m),ICO_PDF,'Buscar el manual oficial','Se abre en otra pestaña','xb-pdf',true); }
+      html += xbtn(fotosUrl(b,m),ICO_EXT,'Ver fotos del modelo','Se abre en otra pestaña','xb-foto',true);
+      html += '</div>';
+    }
     html += '<ul class="codes" style="margin-top:14px">';
     codes.forEach(function(c){ if(filter==="todas"||filter===c[1]) html += row(c); });
     html += '</ul>';
+    if(EX[m.id]){
+      html += '<div class="xbs xbs-b" style="--t1:'+bt[0]+';--t2:'+bt[1]+'">';
+      EX[m.id].forEach(function(x){ html += xbtn('#'+x[1],/test|instalador/i.test(x[0])?ICO_PRG:ICO_EST,x[0],x[2],'xb-info',false); });
+      html += '</div>';
+    }
     app.innerHTML = html;
     foot.textContent = "";
   }
@@ -5685,7 +5938,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     if(term){ searchView(term); return; }
     var id = location.hash.slice(1), f = id && find(id);
     var ll = document.getElementById("logoLink");
-    if(ll) ll.setAttribute("href", (f && f.model) ? "#"+f.brand.id : "#");
+    if(ll) ll.setAttribute("href", (f && f.model) ? ((f.model.hide && PARENT[f.model.id])?"#"+PARENT[f.model.id]:"#"+f.brand.id) : "#");
     var nb = document.getElementById("navbar");
     if(nb){
       if(!f){ nb.hidden = true; }
