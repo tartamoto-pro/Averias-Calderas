@@ -7858,7 +7858,6 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       html += '<div class="xbs" style="margin-top:12px">';
       if(pdf){ MANUALS[m.id].forEach(function(x){ html += xbtn(x[1],ICO_PDF,x[0],'Manual en PDF','xb-pdf',true); }); }
       else { html += xbtn(manualUrl(b,m),ICO_PDF,'Buscar el manual oficial','Se abre en otra pestaña','xb-pdf',true); }
-      html += xbtn(fotosUrl(b,m),ICO_EXT,'Ver fotos del modelo','Se abre en otra pestaña','xb-foto',true);
       html += '</div>';
     }
     html += '<ul class="codes" style="margin-top:14px">';
