@@ -2754,18 +2754,18 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["E14","humos","Umbral de velocidad del ventilador no alcanzado",""]
     ],
     roca_victoria_plus: [
-      ["E01","llama","Bloqueo: no se enciende",""],
-      ["E02","temp","Bloqueo por actuación del termostato de seguridad",""],
-      ["E03","humos","Termostato o presostato de humos",""],
-      ["E04","llama","Bloqueo por pérdida de llama 6 veces seguidas",""],
-      ["E05","sensor","Fallo de la sonda de calefacción",""],
-      ["E06","sensor","Fallo de la sonda de agua caliente",""],
-      ["E10","agua","El presostato hidráulico no da conformidad al funcionamiento",""],
-      ["E25 · E26","agua","Seguridad por probable bloqueo de la bomba",""],
-      ["E27","sensor","Posición incorrecta de la sonda sanitaria",""],
-      ["E32","agua","Alarma por presencia de cal",""],
-      ["E35","llama","Llama parásita",""],
-      ["E96","electronica","Apagado causado por bajadas de la alimentación",""]
+      ["E01", "llama", "Bloqueo: no se enciende", "Pulsar R (reset) 2 s como mínimo. Si se repite, llamar al servicio técnico."],
+      ["E02", "temp", "Bloqueo por actuación del termostato de seguridad", "Pulsar R (reset) 2 s como mínimo. Si se repite, llamar al servicio técnico."],
+      ["E03", "humos", "Actuación del termostato de humos o del presostato de humos", "Llamar al servicio técnico."],
+      ["E04", "llama", "Bloqueo por pérdida de llama 6 veces seguidas", "Pulsar R (reset) 2 s como mínimo. Si se repite, llamar al servicio técnico."],
+      ["E05", "sensor", "Fallo de la sonda de calefacción", "Llamar al servicio técnico."],
+      ["E06", "sensor", "Fallo de la sonda de agua caliente", "Llamar al servicio técnico."],
+      ["E10", "agua", "El presostato hidráulico no da conformidad al funcionamiento", "Comprobar que la presión de la instalación sea la indicada (0,7 a 1,5 bar en frío). Si persiste, llamar al servicio técnico."],
+      ["E25 · E26", "agua", "Actuación de la seguridad por probable bloqueo de la bomba", "Llamar al servicio técnico."],
+      ["E27", "sensor", "Posición incorrecta de la sonda sanitaria", "Pulsar R (reset) 2 s como mínimo. Si se repite, llamar al servicio técnico."],
+      ["E32", "agua", "Alarma por presencia de cal", "Llamar al servicio técnico."],
+      ["E35", "llama", "Llama parásita (error de llama)", "Pulsar R (reset) 2 s como mínimo. Si se repite, llamar al servicio técnico."],
+      ["E96", "electronica", "Apagado causado por bajadas de la alimentación", "El reset es automático. Si persiste, llamar al servicio técnico."]
     ],
     roca_novamax: [
       ["E01","llama","Bloqueo por falta de encendido",""],
@@ -8017,7 +8017,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"roca-neobit-s",name:"Neobit S",set:"roca_neobit",desc:"Los fallos se indican con números de leds (30 a 80) o con códigos E."},
       {id:"roca-bios",name:"Bios",set:"roca_bios",desc:"Condensación. Códigos E de tres cifras."},
       {id:"roca-deimox-box",name:"Deimos Box",set:"roca_deimox",desc:"Mural a gas."},
-      {id:"roca-victoria-plus",name:"Victoria Plus 24/24, 24/24 F y 24/24 TC",set:"roca_victoria_plus",desc:"Mural a gas."},
+      {id:"roca-victoria-plus",name:"Victoria Plus 24/24, 24/24 F y 24/24 T",set:"roca_victoria_plus",desc:"Mural a gas.",note:"Verificado con el manual de usuario (apartado 10). Tras 5 intentos de reset seguidos se bloquea: hay que apagar la caldera unos segundos para volver a intentarlo."},
       {id:"roca-novamax",name:"Novamax 25/25 F, 31/31 F y 31 AF",set:"roca_novamax",desc:"Mural a gas."},
       {id:"roca-nora",name:"Nora (24, 24 A, 24 F, 24 AF, 24/24, 24/24 T y 24/24 F)",set:"roca_destellos",desc:"Los fallos se indican con combinaciones de números que terminan en 90.",note:"La página de referencia da una sola tabla para toda la gama.",ficha:"https://codigocalderas.com/roca-nora/"},
       {id:"roca-funciones",hide:true,name:"Instalador: Novanox",set:"roca_func",desc:"Información, parámetros y rearme."},
@@ -8246,6 +8246,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
   var PARENT = {};
   Object.keys(EX).forEach(function(k){EX[k].forEach(function(x){ if(!PARENT[x[1]]) PARENT[x[1]]=k; });});
   var MANUALS = {
+    "roca-victoria-plus":[["Manual de usuario","manuales/baxi/baxi-victoria-plus-usuario.pdf"]],
     "roca-novanox":[["Manual de usuario","manuales/baxi/baxi-novanox-usuario.pdf"],["Manual de instalación (23 págs)","manuales/baxi/baxi-novanox-instalacion.pdf"]],
     "baxi-neodens-iplus":[["Manual de instalación y usuario","manuales/baxi/baxi-neodens-iplus-instalacion.pdf"]],
     "baxi-platinum-icompact":[["Manual de instalación y usuario","manuales/baxi/baxi-platinum-icompact-instalacion.pdf"]],
