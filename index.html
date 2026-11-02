@@ -348,14 +348,23 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["E98","electronica","Parámetros de la placa mal configurados",""]
     ],
     roca_novanox: [
-      ["E01","llama","Fallo de encendido","El gas no llega a la cámara de combustión: aire en la línea, llave de gas cerrada o regulador defectuoso. Probar un reset de 2 s."],
-      ["E10","agua","Falta de presión en la instalación de calefacción",""],
-      ["E05","sensor","Sonda de calefacción interrumpida",""],
-      ["E06","sensor","Sonda de agua caliente sanitaria interrumpida",""],
-      ["E03","humos","Presostato o termostato de humos: presión por encima de cero o insuficiente","También pueden aparecer E51, E52 y E53."],
-      ["E04","llama","Pérdida de llama: corriente de la sonda de ionización descalibrada",""],
-      ["E35","llama","Llama parásita sin demanda: error de llama",""],
-      ["E98 · E99","electronica","Fallo de comunicación entre microprocesadores o error interno de la placa",""]
+      ["E01", "llama", "Bloqueo por encendido fallido", "Pulsar RESET (2 s). Si se repite, llamar al servicio técnico."],
+      ["E02", "temp", "Bloqueo por intervención del termostato de seguridad", "Pulsar RESET (2 s). Si se repite, llamar al servicio técnico."],
+      ["E03", "humos", "Actuación del termostato de humos", "Llamar al servicio técnico."],
+      ["E04", "llama", "Error de seguridad por pérdida frecuente de llama", "Llamar al servicio técnico."],
+      ["E05", "sensor", "Fallo de la sonda de calefacción", "Llamar al servicio técnico."],
+      ["E06", "sensor", "Fallo de la sonda sanitaria", "Llamar al servicio técnico."],
+      ["E10", "agua", "El presostato hidráulico no da la habilitación", "Comprobar que la presión de la instalación sea la indicada (0,7–1,5 bar en frío). Si persiste, llamar al servicio técnico."],
+      ["E11", "temp", "Actuación del termostato de seguridad de la instalación de baja temperatura (si está conectado)", "Llamar al servicio técnico."],
+      ["E25", "agua", "Seguridad por falta de circulación de agua", "Llamar al servicio técnico."],
+      ["E35", "llama", "Llama parásita (error de llama)", "Pulsar RESET (2 s). Si se repite, llamar al servicio técnico."],
+      ["E51", "humos", "Actuación del presostato de humos durante el funcionamiento de la caldera", "Llamar al servicio técnico."],
+      ["E52", "electronica", "Error interno en la placa", "Llamar al servicio técnico."],
+      ["E53", "humos", "Actuación del presostato de humos", "Llamar al servicio técnico."],
+      ["E80", "electronica", "Error interno en el regulador climático", "Llamar al servicio técnico."],
+      ["E97", "electronica", "Selección errónea de la frecuencia (Hz) de alimentación de la placa electrónica", "Modificar la selección de la frecuencia (Hz)."],
+      ["E98", "electronica", "Error interno de la placa", "Llamar al servicio técnico."],
+      ["E99", "electronica", "Error interno de la placa", "Llamar al servicio técnico."]
     ],
     ariston: [
       ["101","temp","Temperatura excesiva","El termostato límite se ha disparado. Abrir las válvulas de los radiadores y dejar enfriar 15 min antes de resetear."],
@@ -7914,7 +7923,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"baxi-novanox-platinum",name:"Novanox Platinum",set:"baxi_platinum_novanox",desc:"Condensación. Las dos tablas de la fuente son idénticas.",note:"Los códigos 50, 52, 73 y 343 solo corresponden a ciertas configuraciones (acumulador o instalación solar)."},
       {id:"baxi-platinum-combi",name:"Platinum Combi",set:"baxi_platinum_novanox",desc:"Condensación."},
       {id:"baxi-novadens",name:"Novadens 24/24 F",set:"baxi_novadens",desc:"Condensación mixta, gama BaxiRoca.",note:"Algunas entradas de la fuente agrupan dos códigos y son ambiguas. Contrasta con el manual.",ficha:"https://codigocalderas.com/baxiroca-novadens/"},
-      {id:"roca-novanox",name:"Novanox 24/24 F",set:"roca_novanox",desc:"Los códigos de avería empiezan por E. Los códigos A00 y siguientes son informativos, no averías.",note:"Los códigos de la misma tabla sirven también para Neobit S. Las filas de la fuente a veces se repiten entre modelos, así que conviene contrastar con el manual.",ficha:"https://codigocalderas.com/baxi-novanox/"},
+      {id:"roca-novanox",name:"Novanox (24/24 F y 28/28 F)",set:"roca_novanox",desc:"Los códigos de avería empiezan por E.",note:"Verificado con el manual de usuario (tabla del apartado 9). Si hay símbolo de llave, el usuario no puede resolverlo.",ficha:"https://codigocalderas.com/baxi-novanox/"},
       {id:"roca-victoria-20",name:"Victoria 20 (20/20, 20 F, 20/20 F, 20/20 T, 20/20 C y 20/20 Fc)",set:"roca_destellos",desc:"Los fallos se indican con combinaciones de números que terminan en 90.",note:"Son orientativos. Conviene que los interprete un técnico.",ficha:"https://codigocalderas.com/roca-victoria-20/"},
       {id:"roca-laura",name:"Laura 20 / 30 / 35",set:"roca_laura",desc:"Mural a gas. Los códigos son números de dos cifras.",note:"Los códigos que solo corresponden a un modelo lo indican en su pista."},
       {id:"roca-laura-plus",name:"Laura Plus",set:"roca_laura",desc:"Mural a gas."},
@@ -8155,11 +8164,12 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
   var PARENT = {};
   Object.keys(EX).forEach(function(k){EX[k].forEach(function(x){ if(!PARENT[x[1]]) PARENT[x[1]]=k; });});
   var MANUALS = {
+    "roca-novanox":[["Manual de usuario","manuales/baxi/baxi-novanox-usuario.pdf"]],
     "baxi-neodens-iplus":[["Manual de instalación y usuario","manuales/baxi/baxi-neodens-iplus-instalacion.pdf"]],
     "baxi-platinum-icompact":[["Manual de instalación y usuario","manuales/baxi/baxi-platinum-icompact-instalacion.pdf"]],
     "baxi-neodens-24":[["Hoja de parámetros de placa (3 págs)","manuales/baxi/baxi-parametros-placas-novanox-neodens.pdf"]],
     "baxi-novadens":[["Hoja de parámetros de placa (3 págs)","manuales/baxi/baxi-parametros-placas-novanox-neodens.pdf"]],
-    "baxi-platinum":[["Hoja de parámetros de placa (3 págs)","manuales/baxi/baxi-parametros-placas-novanox-neodens.pdf"]],
+    "baxi-platinum":[["Manual de instalación (33 págs)","manuales/baxi/baxi-platinum-instalacion.pdf"],["Hoja de parámetros de placa (3 págs)","manuales/baxi/baxi-parametros-placas-novanox-neodens.pdf"]],
     "baxi-novanox-platinum":[["Hoja de parámetros de placa (3 págs)","manuales/baxi/baxi-parametros-placas-novanox-neodens.pdf"]],
     "baxi-platinum-compact":[["Manual de instalación","manuales/baxi/baxi-platinum-compact-eco-24f-28f-instalacion.pdf"],["Manual de usuario","manuales/baxi/baxi-platinum-compact-eco-24f-28f-usuario.pdf"]],
     "baxi-neodens-lite":[["Manual de instalación","manuales/baxi/baxi-neodens-lite-instalacion.pdf"],["Manual de usuario","manuales/baxi/baxi-neodens-lite-usuario.pdf"]],
