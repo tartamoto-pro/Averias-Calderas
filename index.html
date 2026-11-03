@@ -4281,29 +4281,6 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["Roja 2 intermitente","sensor","Sonda de sanitario averiada",""],
       ["Roja 2 + amarilla 8 intermitentes","sensor","Sonda de calefacción averiada",""]
     ],
-    fo_lipari: [
-      ["01","llama","Bloqueo o avería del control de llama",""],
-      ["02","temp","Termostato límite activado",""],
-      ["06","sensor","Sonda de temperatura NTC averiada",""],
-      ["11","llama","Llama parásita",""],
-      ["12","gas","Cable del modulador interrumpido",""],
-      ["28","info","Cinco rearmes consecutivos",""],
-      ["37","electronica","Tensión de red baja",""],
-      ["40","electronica","Frecuencia de red errónea",""],
-      ["41","llama","Pérdida de llama repetida",""],
-      ["42","electronica","Botón pulsado más de 30 segundos",""],
-      ["62","electronica","Solicitud de calibración de la válvula",""],
-      ["AL70","temp","Temperatura de entrada de 70 °C",""],
-      ["72","temp","Aumento de temperatura no alcanzado",""],
-      ["80","info","Error de driver",""],
-      ["81","llama","Combustión defectuosa al encender",""],
-      ["82","llama","Mala combustión persistente",""],
-      ["83","llama","Mala combustión",""],
-      ["AL84","llama","Mala combustión",""],
-      ["86","humos","Fallo del sensor de velocidad del ventilador",""],
-      ["88","temp","Temperatura elevada",""],
-      ["98","electronica","Error de software",""]
-    ],
     si_brava_bf: [
       ["ALL 02","agua","Presión de agua baja",""],
       ["ALL 03","agua","Presión de agua alta",""],
@@ -8877,7 +8854,6 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     {id:"fondital",name:"Fondital",blurb:"Códigos E01…E99 y señales luminosas.",models:[
       {id:"fondital-tahiti",name:"Tahiti",set:"fo_tahiti",desc:"Mural a gas. Señales con lámparas."},
       {id:"fondital-nias",name:"Nias",set:"fo_nias",desc:"Mural a gas."},
-      {id:"fondital-lipari",name:"Lipari PRO TFS",set:"fo_lipari",desc:"Mural a gas."},
       {id:"fondital-leo",name:"Leo KC",set:"fo_leo",desc:"Condensación."},
       {id:"fondital-minorca",name:"Minorca KC / KR / KRB",set:"fo_leo",desc:"Condensación."},
       {id:"fondital-itaca",name:"Itaca",set:"fo_itaca",desc:"Condensación."},
