@@ -185,6 +185,8 @@ ul.codes li:first-child{border-top:0}
 .lp b{display:block;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1.5px solid var(--line)}
 .lp .on.r b{background:#dc2626;border-color:#dc2626;box-shadow:0 0 7px rgba(220,38,38,.65)}
 .lp .on.g b{background:#16a34a;border-color:#16a34a;box-shadow:0 0 7px rgba(22,163,74,.65)}
+.lp .on.y b{background:#eab308;border-color:#eab308;box-shadow:0 0 7px rgba(234,179,8,.65)}
+.lp .bl.alt b{animation-delay:-.25s}
 .lp .bl b{animation:lpb 1s steps(1) infinite}
 .lp .bl.s2 b{animation-duration:2s}
 .lp .bl.s4 b{animation-duration:4s}
@@ -1971,15 +1973,20 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["A61 · A63 · A64 · A65 · F66","electronica","Anomalía interna de la centralita ABM03","Revisar la toma de tierra; sustituir la centralita si persiste."]
     ],
     ferroli_domiproject_leds: [
-      ["R ✱","llama","El quemador no se enciende (bloqueo)","Falta de gas o aire en los tubos; electrodo de detección o encendido mal colocado, desconectado o con incrustaciones; válvula de gas estropeada; potencia de encendido demasiado baja (regularla en modo TEST). Rearmar con RESET 1 s."],
-      ["R ✱","temp","Protección contra sobretemperatura","Si no es lo de arriba: sensor de calefacción dañado o mal colocado, la bomba no mueve agua o hay aire en la instalación (purgar). El manual da la misma señal para las dos averías."],
-      ["V fijo","llama","Señal de llama con el quemador apagado","Revisar el cableado del electrodo de ionización y la tarjeta. Ojo: verde fijo es también la señal normal de calefacción funcionando; es avería si no hay llama."],
-      ["V ✱","humos","El presostato de aire no cierra en los 60 s tras arrancar el ventilador","Contacto del presostato abierto o cableado; presostato mal conectado; ventilador; diafragma equivocado; chimenea mal dimensionada u obstruida."],
-      ["A ✱","agua","Baja presión de la instalación","Instalación descargada: cargar a 1 bar en frío. Si la presión está bien: presostato del agua desconectado o estropeado."],
-      ["A✱ R✱","sensor","Anomalía del sensor de ida (calefacción)","Sensor estropeado o cableado en cortocircuito o cortado: revisar el cableado o sustituir el sensor."],
-      ["V✱ A✱","sensor","Anomalía del sensor de agua caliente sanitaria","Sensor estropeado o cableado en cortocircuito o cortado: revisar el cableado o sustituir el sensor."],
-      ["A/R alt.","agua","Protección del intercambiador","Las dos luces parpadean alternándose: no circula agua (revisar la bomba) o hay aire en la instalación (purgar)."],
-      ["Luces","info","Luces en funcionamiento normal (tabla 1)","Todas apagadas: caldera apagada. Verde parpadeando: stand-by. Verde parpadeando + amarillo fijo: stand-by en ECO. Verde fijo: calefacción con quemador encendido. Verde fijo + amarillo parpadeando: agua caliente con quemador encendido. Las tres parpadeando: modo TEST."]
+      ["3L:V0 A0 R2","llama","El quemador no se enciende (bloqueo)","Falta de gas o aire en los tubos; electrodo de detección o encendido mal colocado, desconectado o con incrustaciones; válvula de gas estropeada; potencia de encendido demasiado baja (regularla en modo TEST). Rearmar con RESET 1 s."],
+      ["3L:V0 A0 R2","temp","Protección contra sobretemperatura","Si no es lo de arriba: sensor de calefacción dañado o mal colocado, la bomba no mueve agua o hay aire en la instalación (purgar). El manual da la misma señal para las dos averías."],
+      ["3L:V1 A0 R0","llama","Señal de llama con el quemador apagado","Revisar el cableado del electrodo de ionización y la tarjeta. Ojo: verde fijo es también la señal normal de calefacción funcionando; es avería si no hay llama."],
+      ["3L:V2 A0 R0","humos","El presostato de aire no cierra en los 60 s tras arrancar el ventilador","Contacto del presostato abierto o cableado; presostato mal conectado; ventilador; diafragma equivocado; chimenea mal dimensionada u obstruida."],
+      ["3L:V0 A2 R0","agua","Baja presión de la instalación","Instalación descargada: cargar a 1 bar en frío. Si la presión está bien: presostato del agua desconectado o estropeado."],
+      ["3L:V0 A2 R2","sensor","Anomalía del sensor de ida (calefacción)","Sensor estropeado o cableado en cortocircuito o cortado: revisar el cableado o sustituir el sensor."],
+      ["3L:V2 A2 R0","sensor","Anomalía del sensor de agua caliente sanitaria","Sensor estropeado o cableado en cortocircuito o cortado: revisar el cableado o sustituir el sensor."],
+      ["3L:V0 A4 R4","agua","Protección del intercambiador","Las dos luces parpadean alternándose: no circula agua (revisar la bomba) o hay aire en la instalación (purgar)."],
+      ["3L:V0 A0 R0","info","Funcionamiento normal: caldera apagada","Mandos al mínimo. Solo queda activa la función antihielo."],
+      ["3L:V3 A0 R0","info","Funcionamiento normal: stand-by","Caldera encendida esperando demanda."],
+      ["3L:V3 A1 R0","info","Funcionamiento normal: stand-by en modo ECO","Tecla ECO/CONFORT para cambiar de modo."],
+      ["3L:V1 A0 R0","info","Funcionamiento normal: calefacción (quemador encendido) / CONFORT","Si la luz verde está fija sin llama en el quemador, es la avería de señal de llama (arriba)."],
+      ["3L:V1 A3 R0","info","Funcionamiento normal: agua caliente (quemador encendido)",""],
+      ["3L:V3 A3 R3","info","Funcionamiento normal: modo TEST","RESET 3 veces en 3 s para entrar o salir. Se apaga solo a los 15 min."]
     ],
     ferroli_dp_func: [
       ["TEST","info","Activar el modo TEST (máxima potencia)","Pulsar RESET 3 veces en 3 segundos: las tres luces parpadean y la caldera va a la potencia máxima de calefacción programada. Para asegurar el 100 %, girar el mando de calefacción al mínimo y luego al máximo. Salir: RESET 3 veces en 3 s. Se apaga solo a los 15 min."],
@@ -8940,7 +8947,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       {id:"ferroli-bluehelix-pro",name:"Bluehelix Pro (Pro y Pro C)",set:"ferroli_pro",desc:"Condensación.",note:"Los códigos A son bloqueos y los F son averías."},
       {id:"ferroli-bluehelix-tech-c",name:"Bluehelix Tech C",set:"ferroli_pro",desc:"Condensación. Los códigos pueden variar entre versiones."},
       {id:"ferroli-econcept-tech",name:"Econcept Tech 25 C y 35 C",set:"ferroli_digital",desc:"Condensación."},
-      {id:"ferroli-domiproject",name:"Domiproject F 24 (3 luces: verde, amarilla y roja)",set:"ferroli_domiproject_leds",desc:"Mural a gas sin pantalla. Las averías se ven con las tres luces del panel.",note:"Tabla 5 del manual (cod. 3540C99/1, 09/2006). V = verde (llama), A = amarilla (ECO), R = roja (bloqueo). ✱ = parpadeo rápido. Bloqueo: RESET 1 s."},
+      {id:"ferroli-domiproject",name:"Domiproject F 24 (3 luces: verde, amarilla y roja)",set:"ferroli_domiproject_leds",desc:"Mural a gas sin pantalla. Las averías se ven con las tres luces del panel.",note:"Tabla 5 del manual (cod. 3540C99/1, 09/2006). Luces: V verde (llama), A amarilla (ECO), R roja (bloqueo). Bloqueo: RESET 1 s."},
       {id:"ferroli-dp-func",hide:true,name:"Instalador: Domiproject F 24 (luces)",set:"ferroli_dp_func",desc:"Modo TEST, presiones de gas, potencias y cambio de gas."},
       {id:"ferroli-domiproject-digital",name:"Domiproject D (C 24 D, F 24 D y F 32 D, con pantalla)",set:"ferroli_digital",desc:"Mural a gas con pantalla pequeña: los códigos salen como A01, F37…",note:"Tabla orientativa, sin comprobar todavía con el manual de la versión D."},
       {id:"ferroli-divatop-lownox",name:"Divatop Low NOx F 24 y F 32",set:"ferroli_divatop",desc:"Mural a gas estanco."},
@@ -9204,6 +9211,16 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     }
     return null;
   }
+  function ledPanel3(code){
+    var m=code.match(/^3L:V([0-4]) A([0-4]) R([0-4])$/); if(!m) return null;
+    var nm={V:"verde",A:"amarilla",R:"roja"}, ds={0:"apagada",1:"fija",2:"parpadeo rápido",3:"parpadea",4:"parpadeo rápido alterno"}, cap=[];
+    function d(k,v,cls){ v=+v; if(v) cap.push(nm[k]+" "+ds[v]);
+      var c=cls+(v===0?'':v===1?' on':v===2?' on bl sf':v===3?' on bl':' on bl sf'+(k==="R"?' alt':''));
+      return '<i class="'+c+'"><b></b>'+k+'</i>'; }
+    var h=d("V",m[1],"g")+d("A",m[2],"y")+d("R",m[3],"r");
+    if(!cap.length) cap.push("todas apagadas");
+    return '<div class="lp" role="img" aria-label="'+esc(cap.join(", "))+'">'+h+'</div><p class="lpc">'+esc(cap.join(" + "))+'</p>';
+  }
   function ledPanel(code){
     var toks=code.split(" + "), st={R:0,45:0,60:0,75:0,90:0}, cap=[], ok=true;
     toks.forEach(function(t){
@@ -9218,7 +9235,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
     return '<div class="lp" role="img" aria-label="'+esc(cap.join(", "))+'">'+d("R","r","R")+d(45,"g","45")+d(60,"g","60")+d(75,"g","75")+d(90,"g","90")+'</div><p class="lpc">'+esc(cap.join(" + "))+'</p>';
   }
   function row(c,where){
-    var lp = ledPanel(c[0]);
+    var lp = ledPanel3(c[0]) || ledPanel(c[0]);
     return '<li'+(lp?' class="leds"':'')+'>'+(lp?'<div>'+lp+'</div>':'<span class="lcd">'+esc(c[0])+'</span>')+'<div><p class="t">'+esc(c[2])+'</p>'+
       (c[3]?'<p class="h">'+esc(c[3])+'</p>':'')+(where?'<p class="where">'+where+'</p>':'')+
       '</div><span class="tag"><i class="dot" data-cat="'+c[1]+'"></i>'+CATS[c[1]][0]+'</span></li>';
