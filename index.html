@@ -6730,7 +6730,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["F.86","temp","Error: contacto de suelo","Termostato de seguridad con suelo radiante conectado: revisar el ajuste del valor nominal de calefacción."]
     ],
     saunier_tfc_prog: [
-      ["P.xx","info","Cómo entrar en los programas de comprobación","Apagar el aparato con la tecla de encendido. Pulsar 5 segundos la tecla «menu» junto con el botón de encendido: sale (P01) y (OFF). Con las teclas +/- elegir el programa y con «menu» iniciarlo (sale P.0X y On). Se desconecta solo pasado un tiempo. En P.01: «menu» y ajustar de 0 a 100 %; salir pulsando «menu» (7 s para ir al menú de configuración)."],
+      ["P.xx","info","Cómo entrar en los programas de comprobación","1) Apagar la caldera con la tecla de encendido. 2) Mantener pulsada la tecla «mode» y, a la vez, el botón de encendido, durante 5 segundos: sale P01 y OFF. 3) Con las teclas − / + de calefacción elegir el programa. 4) «mode» para iniciarlo: sale P.0X y On. En P.01: «mode», ajustar de 0 a 100 % con − / + de calefacción y «mode» para salir del submenú. Se desconecta solo a los 15 min. Para salir antes: tecla RESET o tecla de encendido."],
       ["P.01","info","Potencia ajustable del quemador en calefacción","Funciona a la potencia que se ponga de 0 % (P mín.) a 100 % (P máx.), con +/-, una vez encendido."],
       ["P.02","info","Quemador a la carga de encendido","Tras un encendido correcto funciona a la carga de encendido."],
       ["P.03","info","Quemador a la demanda de calor máxima","Tras un encendido correcto funciona a carga máxima (la de d.00)."],
@@ -6738,7 +6738,8 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["P.05","info","Llenado del aparato","Bomba y quemador parados; la válvula de 3 vías va a la posición media."],
       ["P.06","info","Purgado de la instalación de calefacción","Se activa 5 minutos en el circuito de calefacción. Comprobar que el purgador de la bomba está abierto."],
       ["P.07","info","Purgado del circuito corto del aparato","Se activa 5 minutos en el circuito corto. Comprobar que el purgador de la bomba está abierto."],
-      ["d.xx","info","Cómo entrar en los códigos de diagnóstico (código 96)","Pulsar 7 segundos la tecla «menu»: sale (0). Con +/- poner 96 (reservado al profesional autorizado) y confirmar con «menu». Con +/- elegir el código, «menu», cambiar el valor y salir pulsando 3 segundos «menu»."],
+      ["d.xx","info","Cómo entrar en los códigos de diagnóstico (código 96)","Con la caldera encendida, pulsar 7 segundos la tecla «mode»: sale 0. Con − / + de agua caliente poner 96 (reservado al instalador) y confirmar con «mode». Con − / + de calefacción elegir el código y con − / + de agua caliente cambiar el valor. Salir: «mode» 3 segundos."],
+      ["Memoria","info","Ver los 10 últimos códigos de error","Pulsar a la vez las teclas − y + de calefacción 7 segundos: sale el primer fallo (01 XX). Con − / + de agua caliente se recorren. Salir: «mode» 3 segundos. Para borrarla: código de diagnóstico d.94 = 1."],
       ["d.00","info","Potencia calorífica máxima","Varía según el modelo (ver datos técnicos). Ajustable."],
       ["d.01","info","Marcha en inercia de la bomba en calefacción","De 1 a 60 min. De fábrica 5."],
       ["d.02","info","Tiempo máximo de bloqueo del quemador en calefacción","De 2 a 60 min. De fábrica 20. Depende de la temperatura de calefacción: a 80 °C queda fijo en 2 min; a 10 °C se puede ajustar entre 2 y 60."],
@@ -6771,7 +6772,7 @@ ul.codes li.leds{grid-template-columns:132px minmax(0,1fr) auto}
       ["d.94","info","Borrar la lista de fallos","0 = no (de fábrica); 1 = sí."]
     ],
     saunier_tfc_estado: [
-      ["S.xx","info","Cómo ver los códigos de estado","Pulsar 3 segundos la tecla indicada en el manual (símbolo ilegible en el PDF) para ver el estado actual; para salir, 3 segundos «menu»."],
+      ["S.xx","info","Cómo ver los códigos de estado","Pulsar 3 segundos la tecla − de calefacción para ver el estado actual. Salir: «mode» 3 segundos."],
       ["S.00","info","Calefacción: ninguna demanda",""],
       ["S.01","info","Calefacción: arranque del ventilador",""],
       ["S.02","info","Calefacción: arranque de la bomba",""],
